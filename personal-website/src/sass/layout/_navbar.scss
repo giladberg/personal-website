@@ -1,0 +1,19 @@
+.navbar{
+    background-color:#1b242f;
+    padding:1.5rem;
+   // position:fixed;
+    z-index:999;
+    display:flex;
+   justify-content:center;
+
+ 
+}
+
+.container-navbar{
+    display:flex;
+    width:50%;
+    max-width:764px;
+    min-width:265px;
+    height:100%;
+     justify-content:space-between;
+}

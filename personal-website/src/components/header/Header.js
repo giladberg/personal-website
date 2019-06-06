@@ -9,11 +9,16 @@ const Header = () => {
   }, []);
 
   return (
-    <Fragment>
-      <canvas ref={canvasRef} />
+    <Fragment >
+      <div className='container-canvas'>
+        <canvas ref={canvasRef} />
+      </div>
+      <div className="containter-content-header">
       <h1 className='header-main-title'>
-        Hello, I'm Gilad Bergmann. <br /> I'm a full-stack web developer.
+        Hello, I'm <span className="header-main-title__myName">Gilad Bergmann</span>. <br /> I'm a full-stack web developer.
       </h1>
+      </div>
+      
     </Fragment>
   );
 };

@@ -1,0 +1,29 @@
+.header{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+   align-content:center;
+    width:100vw;
+    height:100vh;
+    z-index:6;
+}
+
+.container-canvas{
+    position:absolute;
+    top:0;
+    left:0;
+    // width:100vw;
+    // height:100%;
+    z-index:-1;
+    
+}
+
+.containter-content-header{
+    z-index:2;
+    align-self:center;
+    margin:auto;
+    justify-self: center;
+    width: 82%;
+    
+}

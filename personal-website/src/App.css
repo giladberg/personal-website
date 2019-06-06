@@ -38,7 +38,6 @@ body {
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
-  padding: 3rem;
   overflow-x: hidden; }
   @media only screen and (max-width: 56.25em) {
     body {
@@ -353,8 +352,39 @@ template {
   overflow: hidden !important; }
 
 .header-main-title {
-  position: absolute;
-  text-align: center; }
+  z-index: 1;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3.6rem;
+  text-size-adjust: auto;
+  color: #FFFFF0;
+  animation-name: moveUpDown;
+  animation-duration: 2s;
+  animation-timing-function: linear; }
+  .header-main-title__myName {
+    color: #e31b6d; }
+  @media only screen and (min-width: 75em) {
+    .header-main-title {
+      text-align: center; } }
+
+.navbar-text {
+  font-size: 2rem;
+  color: #FFFFF0;
+  padding: 1rem;
+  cursor: pointer;
+  font-family: 'Fredericka the Great', cursive; }
+  .navbar-text:hover {
+    color: #e31b6d;
+    border-bottom: 1px solid #FFFFF0; }
+
+@keyframes moveUpDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20rem); }
+  80% {
+    transform: translateY(8rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 /*
 0 - 600px:      Phone
@@ -373,3 +403,40 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 6; }
+
+.container-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+
+.containter-content-header {
+  z-index: 2;
+  align-self: center;
+  margin: auto;
+  justify-self: center;
+  width: 82%; }
+
+.navbar {
+  background-color: #1b242f;
+  padding: 1.5rem;
+  z-index: 999;
+  display: flex;
+  justify-content: center; }
+
+.container-navbar {
+  display: flex;
+  width: 50%;
+  max-width: 764px;
+  min-width: 265px;
+  height: 100%;
+  justify-content: space-between; }
