@@ -356,7 +356,7 @@ template {
   font-family: 'Permanent Marker', cursive;
   font-size: 3.6rem;
   text-size-adjust: auto;
-  color: #FFFFF0;
+  color: #fffff0;
   animation-name: moveUpDown;
   animation-duration: 2s;
   animation-timing-function: linear; }
@@ -368,13 +368,27 @@ template {
 
 .navbar-text {
   font-size: 2rem;
-  color: #FFFFF0;
+  color: #fffff0;
   padding: 1rem;
   cursor: pointer;
   font-family: 'Fredericka the Great', cursive; }
   .navbar-text:hover {
     color: #e31b6d;
-    border-bottom: 1px solid #FFFFF0; }
+    border-bottom: 1px solid #fffff0; }
+
+.aboutme-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 4rem;
+  padding: 1.5rem;
+  color: #45474a;
+  border-bottom-width: 0.3rem;
+  border-bottom-style: solid; }
+
+.second-title-aboutme {
+  font-size: 4.2rem; }
+
+.powergraph-aboutme {
+  font-size: 2.2rem; }
 
 @keyframes moveUpDown {
   0% {
@@ -440,3 +454,40 @@ ORDER: Base + typography > general layout + grid > page layout > components
   min-width: 265px;
   height: 100%;
   justify-content: space-between; }
+
+.aboutme {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 5rem; }
+
+.tech-list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border: 1px solid red;
+  padding: 4rem; }
+
+.tech-frame {
+  animation-name: moveUpDown;
+  animation-duration: 2s;
+  animation-timing-function: linear; }
+
+.content-frame-aboutme {
+  padding: 10rem;
+  width: 80%;
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.frame-text {
+  border: 1px solid purple; }
+
+.giladimg {
+  width: 30rem;
+  height: 30rem;
+  border: 2px solid red;
+  padding: 20px; }

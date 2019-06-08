@@ -3,37 +3,53 @@
 }
 
 .header-main-title {
-   //position: absolute;
+  //position: absolute;
   // text-align: center;
-   z-index:1;
-   font-family: 'Permanent Marker', cursive;
-   font-size:3.6rem;
-   text-size-adjust: auto;
-   color:$color-primary-white;
+  z-index: 1;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3.6rem;
+  text-size-adjust: auto;
+  color: $color-primary-white;
 
-    animation-name: moveUpDown;
-        animation-duration: 2s;
-        animation-timing-function: linear;
+  animation-name: moveUpDown;
+  animation-duration: 2s;
+  animation-timing-function: linear;
 
-    &__myName{
-      color:$color-primary-pink;
-    }
-  
+  &__myName {
+    color: $color-primary-pink;
+  }
 
   @include respondMin(tab-land) {
-    text-align:center;
+    text-align: center;
   }
 }
 
-.navbar-text{
-  font-size:2rem;
-  color:$color-primary-white;
-  padding:1rem;
-  cursor:pointer;
+.navbar-text {
+  font-size: 2rem;
+  color: $color-primary-white;
+  padding: 1rem;
+  cursor: pointer;
   font-family: 'Fredericka the Great', cursive;
 
-  &:hover{
-    color:$color-primary-pink;
-    border-bottom:1px solid $color-primary-white;
+  &:hover {
+    color: $color-primary-pink;
+    border-bottom: 1px solid $color-primary-white;
   }
+}
+
+.aboutme-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 4rem;
+  padding: 1.5rem;
+  color: $color-primary-grey;
+  border-bottom-width: 0.3rem;
+  border-bottom-style: solid;
+}
+
+.second-title-aboutme{
+  font-size:4.2rem;
+}
+
+.powergraph-aboutme{
+  font-size:2.2rem;
 }

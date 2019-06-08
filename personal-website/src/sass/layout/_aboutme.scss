@@ -1,0 +1,37 @@
+.aboutme {
+  display: flex;
+  //max-width: 1200px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 5rem;
+}
+
+.tech-list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border: 1px solid red;
+  padding: 4rem;
+}
+
+.tech-frame {
+  animation-name: moveUpDown;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+.content-frame-aboutme {
+  padding: 10rem;
+  width:80%;
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+   flex-wrap: wrap;
+
+}
+
+.frame-text{
+  border:1px solid purple;
+}
