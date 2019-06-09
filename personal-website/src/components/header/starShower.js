@@ -3,6 +3,7 @@ var starsShower = canvas => {
   var minusWidth = 0;
   canvas.width = window.innerWidth - minusWidth;
   canvas.height = window.innerHeight;
+  
 
   window.addEventListener('resize', function() {
     canvas.width = window.innerWidth;

@@ -9,7 +9,13 @@ const Navbar = () => {
   ]);
 
   return (
-    <Fragment>
+    <Fragment  >
+     <div className="logo-navbar">
+      <svg className="logo-pic">
+          <use xlinkHref="../../sprite.svg#icon-transformers"></use>
+      </svg>
+      <p className="logo-text">Gilad Bergmann <br/> WEB DEVELOPER</p>
+     </div>
       <div className='container-navbar'>
         {titles.map(title => (
           <p className='navbar-text' key={title}>
@@ -17,6 +23,7 @@ const Navbar = () => {
           </p>
         ))}
       </div>
+     
     </Fragment>
   );
 };

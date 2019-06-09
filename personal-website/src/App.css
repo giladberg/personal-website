@@ -375,6 +375,9 @@ template {
   .navbar-text:hover {
     color: #e31b6d;
     border-bottom: 1px solid #fffff0; }
+  @media only screen and (max-width: 37.5em) {
+    .navbar-text {
+      font-size: 1rem; } }
 
 .aboutme-title {
   font-family: 'Anton', sans-serif;
@@ -389,6 +392,11 @@ template {
 
 .powergraph-aboutme {
   font-size: 2.2rem; }
+
+.logo-text {
+  color: #e31b6d;
+  font-family: 'Niconne', cursive;
+  font-size: 1rem; }
 
 @keyframes moveUpDown {
   0% {
@@ -425,13 +433,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
   align-content: center;
   width: 100vw;
   height: 100vh;
-  z-index: 6; }
+  z-index: 1; }
 
 .container-canvas {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; }
+  z-index: -1;
+  width: 100%; }
 
 .containter-content-header {
   z-index: 2;
@@ -441,19 +450,43 @@ ORDER: Base + typography > general layout + grid > page layout > components
   width: 82%; }
 
 .navbar {
-  background-color: #1b242f;
+  background-color: rgba(0, 0, 0, 0.39);
   padding: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 999;
   display: flex;
-  justify-content: center; }
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  border: 1px solid red; }
+  @media only screen and (max-width: 37.5em) {
+    .navbar {
+      padding: 0; } }
 
 .container-navbar {
+  margin: auto;
   display: flex;
   width: 50%;
   max-width: 764px;
   min-width: 265px;
   height: 100%;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-self: center;
+  border: 1px solid purple; }
+  @media only screen and (max-width: 37.5em) {
+    .container-navbar {
+      width: 60%; } }
+
+.logo-navbar {
+  display: flex;
+  width: 116px;
+  border: 1px solid green;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center; }
 
 .aboutme {
   display: flex;
@@ -464,7 +497,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   padding: 10rem 5rem; }
 
 .tech-list {
-  display: flex;
+  display: none;
   justify-content: space-around;
   width: 100%;
   border: 1px solid red;
@@ -491,3 +524,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   height: 30rem;
   border: 2px solid red;
   padding: 20px; }
+
+.logo-pic {
+  fill: #FFFF00;
+  width: 4rem;
+  height: 4rem; }

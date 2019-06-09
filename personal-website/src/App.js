@@ -8,11 +8,11 @@ import './App.css';
 const App = () => {
   return (
     <div>
-      <header className='header'>
+      <header className='header' >
         <HeaderComponent />
       </header>
       <nav className='navbar'>
-        <Navbar />
+        <Navbar  />
       </nav>
       <main>
         <Aboutme />
