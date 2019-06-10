@@ -36,30 +36,41 @@
     border-bottom: 1px solid $color-primary-white;
   }
 
-   @include respond(phone) {
+  @include respond(phone) {
     font-size: 1rem;
   }
 }
 
 .aboutme-title {
   font-family: 'Anton', sans-serif;
-  font-size: 4rem;
-  padding: 1.5rem;
+  font-size: 4.3rem;
+  padding: 1rem;
   color: $color-primary-grey;
   border-bottom-width: 0.3rem;
   border-bottom-style: solid;
+  position: relative;
 }
 
-.second-title-aboutme{
-  font-size:4.2rem;
+.second-title-aboutme {
+  font-size: 3.5rem;
+  color: $color-primary-pink;
+  font-family: 'Black Ops One', cursive;
+  font-weight: 900;
+  text-align: center;
 }
 
-.powergraph-aboutme{
-  font-size:2.2rem;
+.powergraph-aboutme {
+  margin-top: 3%;
+  font-size: 2rem;
+  color: $color-primary-blue;
+  font-family: 'Rochester', cursive;
+  font-weight: 900;
+  line-height: 1.6;
+  margin-left: 3%;
 }
 
-.logo-text{
-  color:$color-primary-pink;
-  font-family: 'Niconne', cursive;
-  font-size:1rem;
+.logo-text {
+  color: $color-primary-pink;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
 }

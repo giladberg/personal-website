@@ -1,42 +1,41 @@
 .navbar {
-  background-color:rgba(0,0,0,.39) ;
+  background-color: rgba(0, 0, 0, 0.39);
   padding: 1.5rem;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 999;
   display: flex;
   justify-content: flex-start;
-  align-items:stretch;
-  align-content:stretch;
-   border:1px solid red;
-   @include respond(phone) {
+  align-items: stretch;
+  align-content: stretch;
+
+  @include respond(phone) {
     padding: 0;
   }
 } //#1b242f
 
 .container-navbar {
-    margin:auto;
+  margin: auto;
   display: flex;
   width: 50%;
   max-width: 764px;
   min-width: 265px;
   height: 100%;
   justify-content: space-between;
-  align-self:center;
-  border:1px solid purple;
+  align-self: center;
+
   @include respond(phone) {
     width: 60%;
   }
- 
 }
-.logo-navbar{
-  display:flex;
-    width:116px;
-    border:1px solid green;
-    //height:100%;
-    justify-content: space-between;
-     align-content:space-between;
-      align-items:center;
+.logo-navbar {
+  display: flex;
+  width: 116px;
+
+  //height:100%;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
 }

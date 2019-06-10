@@ -381,22 +381,33 @@ template {
 
 .aboutme-title {
   font-family: 'Anton', sans-serif;
-  font-size: 4rem;
-  padding: 1.5rem;
+  font-size: 4.3rem;
+  padding: 1rem;
   color: #45474a;
   border-bottom-width: 0.3rem;
-  border-bottom-style: solid; }
+  border-bottom-style: solid;
+  position: relative; }
 
 .second-title-aboutme {
-  font-size: 4.2rem; }
+  font-size: 3.5rem;
+  color: #e31b6d;
+  font-family: 'Black Ops One', cursive;
+  font-weight: 900;
+  text-align: center; }
 
 .powergraph-aboutme {
-  font-size: 2.2rem; }
+  margin-top: 3%;
+  font-size: 2rem;
+  color: #0000cd;
+  font-family: 'Rochester', cursive;
+  font-weight: 900;
+  line-height: 1.6;
+  margin-left: 3%; }
 
 .logo-text {
   color: #e31b6d;
-  font-family: 'Niconne', cursive;
-  font-size: 1rem; }
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem; }
 
 @keyframes moveUpDown {
   0% {
@@ -404,6 +415,14 @@ template {
     transform: translateY(-20rem); }
   80% {
     transform: translateY(8rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveLeftRight {
+  0% {
+    opacity: 0;
+    transform: translateX(220rem); }
   100% {
     opacity: 1;
     transform: translate(0); } }
@@ -460,8 +479,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  align-content: stretch;
-  border: 1px solid red; }
+  align-content: stretch; }
   @media only screen and (max-width: 37.5em) {
     .navbar {
       padding: 0; } }
@@ -474,8 +492,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   min-width: 265px;
   height: 100%;
   justify-content: space-between;
-  align-self: center;
-  border: 1px solid purple; }
+  align-self: center; }
   @media only screen and (max-width: 37.5em) {
     .container-navbar {
       width: 60%; } }
@@ -483,7 +500,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .logo-navbar {
   display: flex;
   width: 116px;
-  border: 1px solid green;
   justify-content: space-between;
   align-content: space-between;
   align-items: center; }
@@ -494,38 +510,55 @@ ORDER: Base + typography > general layout + grid > page layout > components
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10rem 5rem; }
+  padding: 5rem 5rem;
+  background-color: #f7f7f7; }
 
 .tech-list {
-  display: none;
+  display: flex;
   justify-content: space-around;
   width: 100%;
   border: 1px solid red;
-  padding: 4rem; }
+  padding: 4rem;
+  position: relative; }
 
 .tech-frame {
-  animation-name: moveUpDown;
+  animation-name: moveLeftRight;
   animation-duration: 2s;
-  animation-timing-function: linear; }
+  animation-timing-function: linear;
+  backface-visibility: hidden;
+  animation-duration: 5s;
+  animation-fill-mode: forwards; }
 
 .content-frame-aboutme {
-  padding: 10rem;
+  height: 50vh;
   width: 80%;
-  border: 1px solid green;
+  margin-top: 1%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
 
 .frame-text {
-  border: 1px solid purple; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70%; }
+
+.composition {
+  position: relative; }
 
 .giladimg {
-  width: 30rem;
-  height: 30rem;
-  border: 2px solid red;
-  padding: 20px; }
+  width: 20rem;
+  height: 20rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  transition: all 0.2s;
+  outline-offset: 2rem; }
+  .giladimg:hover {
+    transform: scale(1.07) translateY(-0.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+    z-index: 20; }
 
 .logo-pic {
-  fill: #FFFF00;
+  fill: #ffff00;
   width: 4rem;
   height: 4rem; }

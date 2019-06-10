@@ -36,14 +36,20 @@ const Aboutme = () => {
     <section className='aboutme'>
       <h2 className='aboutme-title'>About me</h2>
       <div className='content-frame-aboutme'>
-        <img className='giladimg' src='./img/gilad.jpeg' alt='gilad' />
-        <div className="frame-text">
-          <h2 className="second-title-aboutme"> Who I Am?</h2>
-          <p className="powergraph-aboutme">I'm Full-Stack Developer, specializing in React and Node.JS.<br/>
-           I have serious passion for Front-End & Back-End.<br/>
-           I Believe in elegant solutions for complex problems.<br/> If you are seeking for a developer,
-           you can get in touch with me here.
-            </p>
+        <div className='composition'>
+          <img className='giladimg' src='./img/gilad.jpeg' alt='gilad' />
+        </div>
+        <div className='frame-text'>
+          <h2 className='second-title-aboutme'> Who I Am?</h2>
+          <p className='powergraph-aboutme'>
+            I'm Full-Stack Developer, specializing in React and Node.JS.
+            <br />
+            I have serious passion for Front-End & Back-End.
+            <br />
+            I Believe in elegant solutions for complex problems.
+            <br /> If you are seeking for a developer, you can get in touch with
+            me here.
+          </p>
         </div>
       </div>
       <div className='tech-list'>
