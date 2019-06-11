@@ -425,6 +425,7 @@ template {
     transform: translateX(220rem); }
   100% {
     opacity: 1;
+    margin-left: 0;
     transform: translate(0); } }
 
 /*
@@ -515,6 +516,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .tech-list {
   display: flex;
+  backface-visibility: visible;
   justify-content: space-around;
   width: 100%;
   border: 1px solid red;
@@ -522,12 +524,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
   position: relative; }
 
 .tech-frame {
+  position: relative;
   animation-name: moveLeftRight;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  backface-visibility: hidden;
   animation-duration: 5s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out; }
 
 .content-frame-aboutme {
   height: 50vh;

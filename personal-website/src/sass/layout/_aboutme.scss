@@ -12,6 +12,8 @@
 
 .tech-list {
   display: flex;
+
+  backface-visibility: visible;
   justify-content: space-around;
   width: 100%;
   border: 1px solid red;
@@ -20,12 +22,15 @@
 }
 
 .tech-frame {
+  position: relative;
+
   animation-name: moveLeftRight;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  backface-visibility: hidden;
+
+  // animation-timing-function: linear;
+  //backface-visibility: hidden;
   animation-duration: 5s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
 
 .content-frame-aboutme {

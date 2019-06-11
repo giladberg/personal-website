@@ -28,10 +28,6 @@ const Aboutme = () => {
     });
   }, []);
 
-  const pStyle = {
-    bacgrounColor: 'black'
-  };
-
   return (
     <section className='aboutme'>
       <h2 className='aboutme-title'>About me</h2>
@@ -52,13 +48,14 @@ const Aboutme = () => {
           </p>
         </div>
       </div>
+      <h2> Using Technology:</h2>
       <div className='tech-list'>
         {flag &&
           img.map((photo, index) => (
             <div
               className='tech-frame'
               key={photo.name}
-              style={{ animationDelay: `${index - 0.5}s` }}
+              style={{ animationDelay: `0s` }}
             >
               <img src={photo.url} alt={photo.name} />
               <p>{photo.name}</p>
