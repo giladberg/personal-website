@@ -380,8 +380,8 @@ template {
       font-size: 1rem; } }
 
 .aboutme-title {
-  font-family: 'Anton', sans-serif;
-  font-size: 4.3rem;
+  font-family: 'Francois One', sans-serif;
+  font-size: 3.9rem;
   padding: 1rem;
   color: #45474a;
   border-bottom-width: 0.3rem;
@@ -396,18 +396,29 @@ template {
   text-align: center; }
 
 .powergraph-aboutme {
-  margin-top: 3%;
+  margin-top: 1%;
   font-size: 2rem;
   color: #0000cd;
   font-family: 'Rochester', cursive;
   font-weight: 900;
   line-height: 1.6;
-  margin-left: 3%; }
+  text-align: left; }
 
 .logo-text {
   color: #e31b6d;
   font-family: 'Dancing Script', cursive;
   font-size: 1.1rem; }
+
+.mytechnology-aboutme {
+  position: relative;
+  font-size: 3.5rem;
+  font-family: 'Black Ops One', cursive;
+  color: #e31b6d;
+  margin-top: -3%; }
+
+.tech-text {
+  color: black;
+  font-weight: 900; }
 
 @keyframes moveUpDown {
   0% {
@@ -508,41 +519,51 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .aboutme {
   display: flex;
   width: 100%;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 5rem 5rem;
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  flex-wrap: wrap; }
 
 .tech-list {
   display: flex;
   backface-visibility: visible;
   justify-content: space-around;
-  width: 100%;
-  border: 1px solid red;
-  padding: 4rem;
-  position: relative; }
+  width: 70%;
+  padding: 4rem; }
 
-.tech-frame {
-  position: relative;
-  animation-name: moveLeftRight;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out; }
+@media only screen and (min-width: 75em) {
+  .tech-frame {
+    animation-name: moveLeftRight;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out; } }
 
 .content-frame-aboutme {
-  height: 50vh;
+  min-height: 50vh;
   width: 80%;
-  margin-top: 1%;
+  margin-top: 3%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  position: relative; }
 
 .frame-text {
+  margin-bottom: 9%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 70%; }
+  align-items: center;
+  height: 70%;
+  width: 100%; }
+
+.powergraph-aboutme {
+  position: relative;
+  width: 100%;
+  justify-self: center;
+  margin-left: 2%; }
 
 .composition {
   position: relative; }

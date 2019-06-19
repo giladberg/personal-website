@@ -20,6 +20,7 @@ const Aboutme = () => {
   useEffect(() => {
     $(window).scroll(function(event) {
       var y = $(this).scrollTop();
+      console.log(y);
       if (y > 300) {
         setFlag(true);
       } else {
@@ -37,18 +38,20 @@ const Aboutme = () => {
         </div>
         <div className='frame-text'>
           <h2 className='second-title-aboutme'> Who I Am?</h2>
-          <p className='powergraph-aboutme'>
-            I'm Full-Stack Developer, specializing in React and Node.JS.
-            <br />
-            I have serious passion for Front-End & Back-End.
-            <br />
-            I Believe in elegant solutions for complex problems.
-            <br /> If you are seeking for a developer, you can get in touch with
-            me here.
-          </p>
+          <div className='text-container'>
+            <p className='powergraph-aboutme'>
+              I'm Full-Stack Developer, specializing in React and Node.JS.
+              <br />
+              I have serious passion for Front-End & Back-End.
+              <br />
+              I Believe in elegant solutions for complex problems.
+              <br /> If you are seeking for a developer, you can get in touch
+              with me here.
+            </p>
+          </div>
         </div>
       </div>
-      <h2> Using Technology:</h2>
+      <h2 className='mytechnology-aboutme'> Using Technology:</h2>
       <div className='tech-list'>
         {flag &&
           img.map((photo, index) => (
@@ -58,7 +61,7 @@ const Aboutme = () => {
               style={{ animationDelay: `0s` }}
             >
               <img src={photo.url} alt={photo.name} />
-              <p>{photo.name}</p>
+              <p class='tech-text'>{photo.name}</p>
             </div>
           ))}
       </div>

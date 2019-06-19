@@ -42,8 +42,8 @@
 }
 
 .aboutme-title {
-  font-family: 'Anton', sans-serif;
-  font-size: 4.3rem;
+  font-family: 'Francois One', sans-serif;
+  font-size: 3.9rem;
   padding: 1rem;
   color: $color-primary-grey;
   border-bottom-width: 0.3rem;
@@ -60,17 +60,35 @@
 }
 
 .powergraph-aboutme {
-  margin-top: 3%;
+  margin-top: 1%;
   font-size: 2rem;
   color: $color-primary-blue;
   font-family: 'Rochester', cursive;
   font-weight: 900;
   line-height: 1.6;
-  margin-left: 3%;
+  text-align: left;
+  //margin-left: 3%;
 }
 
 .logo-text {
   color: $color-primary-pink;
   font-family: 'Dancing Script', cursive;
   font-size: 1.1rem;
+}
+
+.mytechnology-aboutme {
+  position: relative;
+  font-size: 3.5rem;
+  font-family: 'Black Ops One', cursive;
+  color: $color-primary-pink;
+  //margin-top: 3%;
+  margin-top: -3%;
+  @include respond(phone) {
+    //margin-top: 10%;
+  }
+}
+
+.tech-text {
+  color: black;
+  font-weight: 900;
 }
