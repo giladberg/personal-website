@@ -20,7 +20,6 @@ const Aboutme = () => {
   useEffect(() => {
     $(window).scroll(function(event) {
       var y = $(this).scrollTop();
-      console.log(y);
       if (y > 300) {
         setFlag(true);
       } else {
@@ -61,7 +60,7 @@ const Aboutme = () => {
               style={{ animationDelay: `0s` }}
             >
               <img src={photo.url} alt={photo.name} />
-              <p class='tech-text'>{photo.name}</p>
+              <p className='tech-text'>{photo.name}</p>
             </div>
           ))}
       </div>
