@@ -356,7 +356,8 @@ template {
   font-family: 'Permanent Marker', cursive;
   font-size: 3.6rem;
   text-size-adjust: auto;
-  color: #fffff0;
+  color: #ffff00;
+  font-weight: 900;
   animation-name: moveUpDown;
   animation-duration: 2s;
   animation-timing-function: linear; }
@@ -368,7 +369,7 @@ template {
 
 .navbar-text {
   font-size: 2rem;
-  color: #fffff0;
+  color: #ffff00;
   padding: 1rem;
   cursor: pointer;
   font-family: 'Fredericka the Great', cursive; }
@@ -467,7 +468,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
   align-content: center;
   width: 100vw;
   height: 100vh;
-  z-index: 1; }
+  z-index: 1;
+  background-image: url("./img/sean-lim-1225106-unsplash.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; }
 
 .container-canvas {
   position: absolute;
@@ -481,7 +487,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   align-self: center;
   margin: auto;
   justify-self: center;
-  width: 82%; }
+  width: 82%;
+  margin-top: 4%; }
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.39);
@@ -528,7 +535,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
   align-items: center;
   padding: 5rem 5rem;
   background-color: #f7f7f7;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  background-image: url("./img/lukas-blazek-261681-unsplash.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; }
 
 .tech-list {
   display: flex;
@@ -580,13 +592,21 @@ ORDER: Base + typography > general layout + grid > page layout > components
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-image: url("./img/aleksandra-wantuch-1138330-unsplash.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; }
 
 .card-container {
   margin-top: 5%;
-  width: 80%;
+  width: 50%;
   height: 100%;
-  border: 1px solid red; }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
 
 .giladimg {
   width: 20rem;
@@ -610,10 +630,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
   -moz-perspective: 100rem;
   position: relative;
   height: 40rem;
-  width: 30rem; }
+  width: 30rem;
+  margin-bottom: 8%; }
   .card__side {
     height: 42rem;
-    transition: all .8s ease;
+    transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -639,10 +660,16 @@ ORDER: Base + typography > general layout + grid > page layout > components
     transform: rotateY(0); }
   .card__picture {
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
     height: 42rem;
     background-blend-mode: screen;
+    background-size: 400px 500px;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px; }
+    border-top-right-radius: 10px;
+    border: 3px solid brown; }
     .card__picture--1 {
       background-image: url("./img/snake.jpg"); }
     .card__picture--2 {

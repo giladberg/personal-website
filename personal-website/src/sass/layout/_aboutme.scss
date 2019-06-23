@@ -10,6 +10,11 @@
   background-color: $color-grey-light-1;
   // border: 3px solid purple;
   flex-wrap: wrap;
+  background-image: url('./img/lukas-blazek-261681-unsplash.jpg');
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 .tech-list {

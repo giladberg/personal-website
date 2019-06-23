@@ -2,17 +2,15 @@ import React, { Fragment, useEffect, useRef } from 'react';
 import starShower from './starShower';
 
 const Header = () => {
-  const canvasRef = useRef(null);
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    starShower.starsShower(canvas);
-  }, []);
+  // const canvasRef = useRef(null);
+  // useEffect(() => {
+  //   const canvas = canvasRef.current;
+  //   starShower.starsShower(canvas);
+  // }, []);
 
   return (
     <Fragment>
-      <div className='container-canvas'>
-        <canvas ref={canvasRef} />
-      </div>
+      <div className='container-canvas'>{/* <canvas ref={canvasRef} /> */}</div>
       <div className='containter-content-header'>
         <h1 className='header-main-title'>
           Hello, I'm{' '}

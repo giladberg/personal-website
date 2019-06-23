@@ -2,16 +2,13 @@ var starsShower = canvas => {
   var c = canvas.getContext('2d');
   var minusWidth = 0;
   canvas.width = window.innerWidth - minusWidth;
-  canvas.height = window.innerHeight;
-  
+  canvas.height = window.innerHeight - minusWidth;
 
   window.addEventListener('resize', function() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   });
 
-  console.log(window.innerWidth);
-  console.log(window.innerHeight);
   /*
    * ------------------------------------------
    * *-----------------------------

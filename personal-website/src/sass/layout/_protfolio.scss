@@ -4,15 +4,23 @@
   height: 100%;
   padding: 5rem 5rem;
   background-color: $color-grey-light-1;
-// border: 3px solid purple;
+  // border: 3px solid purple;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-image: url('./img/aleksandra-wantuch-1138330-unsplash.jpg');
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
-.card-container{
-    margin-top:5%;
-    width: 80%;
-    height: 100%;
-    border:1px solid red;
+.card-container {
+  margin-top: 5%;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
