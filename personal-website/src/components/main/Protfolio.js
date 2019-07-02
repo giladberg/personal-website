@@ -12,33 +12,48 @@ const Protfolio = () => {
         {projectList.map((project, index) => (
           <div key={index} className='card'>
             <div className='card__side card__side--front'>
+              <h4 className='card__heading'>
+                <span className='card__heading-span '>{project.title}</span>
+              </h4>
               <div
                 className='card__picture card__picture__1'
                 style={{ backgroundImage: `url(./img/${project.photo})` }}
               >
                 &nbsp;
               </div>
-              <h4 className='card__heading'>
-                <span className='card__heading-span card__heading-span--1'>
-                  {project.title}
-                </span>
-              </h4>
             </div>
             <div className='card__side card__side--back card__side--back-1'>
               <div className='card__cta'>
                 <div className='card__price-box '>
-                  <p className='card__tech-paragraph'>
-                    Client Side:{project.clientSide}{' '}
+                  <p className='card__tech-title tech-uniqe-title'>
+                    Technology:{' '}
                   </p>
                   <p className='card__tech-paragraph'>
-                    Server Side:{project.serverSide}{' '}
+                    <span className='tech-uniqe-title'> Client Side: </span>
+                    {project.clientSide}{' '}
+                  </p>
+                  <p className='card__tech-paragraph'>
+                    <span className='tech-uniqe-title'>Server Side: </span>
+                    {project.serverSide ? (
+                      project.serverSide
+                    ) : (
+                      <p>no server side</p>
+                    )}{' '}
                   </p>
                 </div>
 
-                <a href='#popup' className='btn btn--white'>
+                <a
+                  href={project.url}
+                  className='btn btn--red-green'
+                  target='_blank'
+                >
                   Check It Out
                 </a>
-                <a href='#popup' className='btn btn--white'>
+                <a
+                  href={project.gitHub}
+                  className='btn btn--red-green'
+                  target='_blank'
+                >
                   GitHub
                 </a>
               </div>
@@ -46,31 +61,6 @@ const Protfolio = () => {
           </div>
         ))}
       </div>
-      {/* <div className='card-container'>
-        <div className='card'>
-          <div className='card__side card__side--front'>
-            <div className='card__picture card__picture--1'>&nbsp;</div>
-            <h4 className='card__heading'>
-              <span className='card__heading-span card__heading-span--1'>
-                snake
-              </span>
-            </h4>
-          </div>
-          <div className='card__side card__side--back card__side--back-1'>
-            <div className='card__cta'>
-              <div className='card__price-box '>
-                <h3 className='card__tech-title'>Name of the project: </h3>
-                <p className='card__tech-paragraph'>Client Side: </p>
-                <p className='card__tech-paragraph'>Server Side: </p>
-                <p className='card__tech-paragraph'>GitHub: </p>
-              </div>
-              <a href='#popup' className='btn btn--white'>
-                Check It Out
-              </a>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 };

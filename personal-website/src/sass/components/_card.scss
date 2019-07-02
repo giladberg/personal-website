@@ -74,9 +74,10 @@
     background-size: 400px 500px;
     // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border: 3px solid brown;
+    //border-top-left-radius: 10px;
+    //border-top-right-radius: 10px;
+    //  border: 3px solid brown;
+    z-index: 9999;
 
     &--1 {
       // background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
@@ -106,22 +107,37 @@
     font-size: 2.8rem;
     font-weight: 300;
     text-transform: uppercase;
-    text-align: right;
+    text-align: center;
     color: $color-primary-white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 75%;
+    font-family: 'Black Ops One', cursive;
+    color: $color-primary-green;
+
+    //background-color: transparent;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    //width: 75%;
+    position: relative;
+    // border: 1px solid blue;
+    width: 100%;
+    // border-top-left-radius: 10px;
+    //border-top-right-radius: 10px;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-secondary-light, 0.85),
+      rgba($color-secondary-dark, 0.85)
+    );
   }
 
   &__heading-span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1rem 1.5rem;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    //padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    border: 1px solid white;
+    // border: 1px solid white;
 
     &--1 {
       background-image: linear-gradient(
@@ -181,20 +197,26 @@
     text-align: left;
     color: $color-primary-white;
     margin-bottom: 10rem;
-    border: 1px solid blue;
+    //border: 1px solid blue;
   }
 
   &__tech-title {
-    font-size: 2rem;
+    text-align: center;
+    font-size: 2.3rem;
     text-transform: uppercase;
-    font-weight: 900;
-    line-height: 2.6;
+    font-weight: 700;
+    line-height: 2;
+    font-family: 'Black Ops One', cursive;
+
+    padding: 0.5rem;
   }
 
   &__tech-paragraph {
     font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 2.6;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: 'Black Ops One', cursive;
+    color: $color-primary-green;
   }
 
   @include respond(tab-port) {

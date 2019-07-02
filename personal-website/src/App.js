@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import HeaderComponent from './components/header/Header';
 import Navbar from './components/nav-bar/Navbar';
 import Aboutme from './components/main/Aboutme';
 import Protfolio from './components/main/Protfolio';
+import Contactme from './components/main/Contactme';
 import './App.css';
 
 const App = () => {
@@ -18,6 +18,7 @@ const App = () => {
       <main>
         <Aboutme />
         <Protfolio />
+        <Contactme />
       </main>
     </div>
   );
