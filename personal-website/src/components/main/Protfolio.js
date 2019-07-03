@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import projectList from './project';
 
 const Protfolio = () => {
@@ -37,7 +37,7 @@ const Protfolio = () => {
                     {project.serverSide ? (
                       project.serverSide
                     ) : (
-                      <p>no server side</p>
+                      <Fragment> server side</Fragment>
                     )}{' '}
                   </p>
                 </div>
