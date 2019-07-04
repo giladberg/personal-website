@@ -10,23 +10,27 @@ var transporter = nodemailer.createTransport({
   }
 });
 
-const mailOptions = {
-  from: 'giladbergmann212@gmail.com', // sender address
-  to: 'giladberg@gmail.com', // list of receivers
-  subject: 'Subject of your email', // Subject line
-  html: '<p style="color:blue">berger homo</p>' // plain text body
-};
-
 // @route    GET api/auth
 // @desc     Test  route
 // @access   Public
-router.get('/', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
+    let mailOptions = {
+      from: 'giladbergmann212@gmail.com', // sender address
+      to: 'giladberg@gmail.com', // list of receivers
+      subject: 'someone interest me', // Subject line
+      html: `<p style="color:blue">name: ${req.body.name}<br>
+      email: ${req.body.email}<br>
+      phone: ${req.body.phone}<br>
+      message: ${req.body.message}
+      </p>` // plain text body
+    };
+
     transporter.sendMail(mailOptions, function(err, info) {
       if (err) console.log(err);
       else console.log(info);
     });
-    res.send('dsd');
+    res.send('ok');
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
