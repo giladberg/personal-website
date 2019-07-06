@@ -1,0 +1,26 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-profile {
+  width: 32px;
+  height: 32px;
+  background-position: 0 0;
+}
+.icon-addressbook {
+  width: 32px;
+  height: 32px;
+  background-position: -48px 0;
+}
+.icon-info {
+  width: 32px;
+  height: 32px;
+  background-position: -96px 0;
+}
+.icon-home3 {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -48px;
+}
+

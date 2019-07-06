@@ -373,9 +373,6 @@ template {
   padding: 1rem;
   cursor: pointer;
   font-family: 'Fredericka the Great', cursive; }
-  .navbar-text:hover {
-    color: #e31b6d;
-    border-bottom: 1px solid #fffff0; }
   @media only screen and (max-width: 37.5em) {
     .navbar-text {
       font-size: 1rem; } }
@@ -409,6 +406,9 @@ template {
   color: #e31b6d;
   font-family: 'Dancing Script', cursive;
   font-size: 1.1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .logo-text {
+      display: none; } }
 
 .mytechnology-aboutme {
   position: relative;
@@ -426,6 +426,22 @@ template {
 
 .tech-uniqe-title {
   color: #550a21; }
+
+input:focus,
+textarea {
+  outline: none !important; }
+
+input,
+textarea {
+  color: red;
+  border: none;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1.2px solid blue;
+  background-color: transparent;
+  font-size: 2rem;
+  font-family: 'Black Ops One', cursive;
+  width: 30rem; }
 
 @keyframes moveUpDown {
   0% {
@@ -520,7 +536,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   align-self: center; }
   @media only screen and (max-width: 37.5em) {
     .container-navbar {
-      width: 60%; } }
+      width: 60%;
+      align-self: flex-start;
+      margin: 0; } }
 
 .logo-navbar {
   display: flex;
@@ -528,6 +546,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
   justify-content: space-between;
   align-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .logo-navbar {
+      width: 50px; } }
+
+.nav-bar-list {
+  display: flex; }
+  .nav-bar-list:hover {
+    border-bottom: 1px solid #e31b6d; }
+    .nav-bar-list:hover .navbar-text {
+      color: #e31b6d; }
+    .nav-bar-list:hover .icon-nav-bar {
+      filter: invert(84%) sepia(85%) saturate(7494%) hue-rotate(356deg) brightness(102%) contrast(105%); }
 
 .aboutme {
   display: flex;
@@ -626,6 +656,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; }
+  .contactme__container {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    justify-content: space-between;
+    align-content: space-between; }
+
+.btn-container {
+  display: flex;
+  margin: auto;
+  padding: 2rem; }
 
 .giladimg {
   width: 20rem;
@@ -641,8 +683,21 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .logo-pic {
   fill: #ffff00;
-  width: 4rem;
-  height: 4rem; }
+  width: 40px;
+  height: 40px; }
+  @media only screen and (max-width: 37.5em) {
+    .logo-pic {
+      width: 30px;
+      height: 30px; } }
+
+.icon-nav-bar {
+  filter: invert(22%) sepia(54%) saturate(6753%) hue-rotate(324deg) brightness(92%) contrast(93%);
+  margin-right: 5%;
+  margin-bottom: 3px;
+  width: 23px; }
+  @media only screen and (max-width: 37.5em) {
+    .icon-nav-bar {
+      width: 13px; } }
 
 .card {
   perspective: 100rem;

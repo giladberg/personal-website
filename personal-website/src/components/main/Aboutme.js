@@ -51,7 +51,7 @@ const Aboutme = () => {
         </div>
       </div>
       <h2 className='mytechnology-aboutme'> Using Technology:</h2>
-      <div className='tech-list'>
+      {/* <div className='tech-list'>
         {flag &&
           img.map((photo, index) => (
             <div
@@ -63,7 +63,7 @@ const Aboutme = () => {
               <p className='tech-text'>{photo.name}</p>
             </div>
           ))}
-      </div>
+      </div> */}
     </section>
   );
 };

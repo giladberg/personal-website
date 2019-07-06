@@ -17,6 +17,23 @@
 
 .logo-pic {
   fill: $color-primary-yellow;
-  width: 4rem;
-  height: 4rem;
+
+  width: 40px;
+  height: 40px;
+  @include respond(phone) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.icon-nav-bar {
+  filter: invert(22%) sepia(54%) saturate(6753%) hue-rotate(324deg)
+    brightness(92%) contrast(93%);
+  margin-right: 5%;
+  margin-bottom: 3px;
+
+  width: 23px;
+  @include respond(phone) {
+    width: 13px;
+  }
 }

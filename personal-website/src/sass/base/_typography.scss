@@ -31,10 +31,10 @@
   cursor: pointer;
   font-family: 'Fredericka the Great', cursive;
 
-  &:hover {
-    color: $color-primary-pink;
-    border-bottom: 1px solid $color-primary-white;
-  }
+  // &:hover {
+  //   color: $color-primary-pink;
+  //   //border-bottom: 1px solid $color-primary-white;
+  // }
 
   @include respond(phone) {
     font-size: 1rem;
@@ -74,6 +74,9 @@
   color: $color-primary-pink;
   font-family: 'Dancing Script', cursive;
   font-size: 1.1rem;
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 .mytechnology-aboutme {
@@ -98,4 +101,24 @@
 
 .tech-uniqe-title {
   color: $color-primary-bordo;
+}
+
+input:focus,
+textarea {
+  outline: none !important;
+}
+
+input,
+textarea {
+  color: red;
+  border: none;
+  // padding: 3rem;
+  padding-top: 3rem;
+  // padding-right: 0.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1.2px solid blue;
+  background-color: transparent;
+  font-size: 2rem;
+  font-family: 'Black Ops One', cursive;
+  width: 30rem;
 }

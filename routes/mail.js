@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
       message: ${req.body.message}
       </p>` // plain text body
     };
-
+    console.log(mailOptions);
     transporter.sendMail(mailOptions, function(err, info) {
       if (err) console.log(err);
       else console.log(info);

@@ -14,7 +14,7 @@
   @include respond(phone) {
     padding: 0;
   }
-} //#1b242f
+}
 
 .container-navbar {
   margin: auto;
@@ -25,9 +25,15 @@
   height: 100%;
   justify-content: space-between;
   align-self: center;
-
+  //border: 1px solid green;
   @include respond(phone) {
     width: 60%;
+    align-self: flex-start;
+    margin: 0;
+  }
+  @include respond(tab-port) {
+    //  background-color: blue;
+    // width: 75%;
   }
 }
 .logo-navbar {
@@ -38,4 +44,26 @@
   justify-content: space-between;
   align-content: space-between;
   align-items: center;
+  //border: 1px solid wheat;
+  @include respond(phone) {
+    width: 50px;
+  }
+}
+
+.nav-bar-list {
+  display: flex;
+  //min-width: 120px;
+  //border: 1px solid red;
+  &:hover {
+    border-bottom: 1px solid $color-primary-pink;
+
+    .navbar-text {
+      color: $color-primary-pink;
+    }
+
+    .icon-nav-bar {
+      filter: invert(84%) sepia(85%) saturate(7494%) hue-rotate(356deg)
+        brightness(102%) contrast(105%);
+    }
+  }
 }
