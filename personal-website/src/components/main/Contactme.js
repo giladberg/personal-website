@@ -41,7 +41,7 @@ const Contactme = () => {
       <h2 className='aboutme-title'>Contact me</h2>
 
       <form className='contactme__container' onSubmit={e => onSubmit(e)}>
-        {/* <input
+        <input
           type='text'
           placeholder='Enter your name'
           value={name}
@@ -74,10 +74,10 @@ const Contactme = () => {
           cols='50'
           required
           onChange={e => onChange(e)}
-        /> */}
-        {/* <div className='btn-container'>
+        />
+        <div className='btn-container'>
           <input type='submit' className='btn btn--green' value='Send' />
-        </div> */}
+        </div>
       </form>
     </section>
   );

@@ -353,16 +353,18 @@ template {
 
 .header-main-title {
   z-index: 1;
-  font-family: 'Permanent Marker', cursive;
   font-size: 3.6rem;
   text-size-adjust: auto;
-  color: #ffff00;
+  color: #1b2d3d;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 900;
   animation-name: moveUpDown;
   animation-duration: 2s;
-  animation-timing-function: linear; }
+  animation-timing-function: linear;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; }
   .header-main-title__myName {
-    color: #e31b6d; }
+    color: yellow;
+    text-shadow: 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow; }
   @media only screen and (min-width: 75em) {
     .header-main-title {
       text-align: center; } }
@@ -372,7 +374,7 @@ template {
   color: #ffff00;
   padding: 1rem;
   cursor: pointer;
-  font-family: 'Fredericka the Great', cursive; }
+  font-family: 'Roboto Condensed', sans-serif; }
   @media only screen and (max-width: 37.5em) {
     .navbar-text {
       font-size: 1rem; } }
@@ -488,7 +490,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  background-image: url("./img/sean-lim-1225106-unsplash.jpg");
+  background-image: url("./img/luca-bravo-xnqVGsbXgV4-unsplash.jpg");
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;

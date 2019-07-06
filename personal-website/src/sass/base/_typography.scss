@@ -6,17 +6,24 @@
   //position: absolute;
   // text-align: center;
   z-index: 1;
-  font-family: 'Permanent Marker', cursive;
+  // font-family: 'Permanent Marker', cursive;
   font-size: 3.6rem;
   text-size-adjust: auto;
-  color: $color-primary-yellow;
+  //  color: $color-primary-yellow;
+  color: #1b2d3d;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 900;
   animation-name: moveUpDown;
   animation-duration: 2s;
   animation-timing-function: linear;
 
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+
   &__myName {
-    color: $color-primary-pink;
+    //color: $color-primary-pink;
+    color: yellow;
+    text-shadow: 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow;
   }
 
   @include respondMin(tab-land) {
@@ -29,7 +36,8 @@
   color: $color-primary-yellow;
   padding: 1rem;
   cursor: pointer;
-  font-family: 'Fredericka the Great', cursive;
+  //font-family: 'Fredericka the Great', cursive;
+  font-family: 'Roboto Condensed', sans-serif;
 
   // &:hover {
   //   color: $color-primary-pink;
