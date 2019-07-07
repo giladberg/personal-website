@@ -39,6 +39,9 @@ body {
   height: 100vh;
   box-sizing: border-box;
   overflow-x: hidden; }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      overflow-x: auto !important; } }
   @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
@@ -353,7 +356,7 @@ template {
 
 .header-main-title {
   z-index: 1;
-  font-size: 3.6rem;
+  font-size: 4.6rem;
   text-size-adjust: auto;
   color: #1b2d3d;
   font-family: 'Open Sans Condensed', sans-serif;
@@ -361,13 +364,11 @@ template {
   animation-name: moveUpDown;
   animation-duration: 2s;
   animation-timing-function: linear;
+  text-align: center;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; }
   .header-main-title__myName {
     color: yellow;
     text-shadow: 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow; }
-  @media only screen and (min-width: 75em) {
-    .header-main-title {
-      text-align: center; } }
 
 .navbar-text {
   font-size: 2rem;
@@ -383,14 +384,14 @@ template {
   font-family: 'Francois One', sans-serif;
   font-size: 3.9rem;
   padding: 1rem;
-  color: #45474a;
+  color: #000000;
   border-bottom-width: 0.3rem;
   border-bottom-style: solid;
   position: relative; }
 
 .second-title-aboutme {
   font-size: 3.5rem;
-  color: #e31b6d;
+  color: #bc8f8f;
   font-family: 'Black Ops One', cursive;
   font-weight: 900;
   text-align: center; }
@@ -398,7 +399,7 @@ template {
 .powergraph-aboutme {
   margin-top: 1%;
   font-size: 2rem;
-  color: #0000cd;
+  color: #deb887;
   font-family: 'Rochester', cursive;
   font-weight: 900;
   line-height: 1.6;
@@ -413,11 +414,12 @@ template {
       display: none; } }
 
 .mytechnology-aboutme {
+  margin-top: 5%;
+  text-align: right;
   position: relative;
   font-size: 3.5rem;
   font-family: 'Black Ops One', cursive;
-  color: #e31b6d;
-  margin-top: -3%; }
+  color: #bc8f8f; }
 
 .tech-text {
   color: #0000cd;
@@ -435,15 +437,31 @@ textarea {
 
 input,
 textarea {
-  color: red;
+  color: black;
   border: none;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1.2px solid blue;
+  border-bottom: 1.2px solid #0a5521;
   background-color: transparent;
   font-size: 2rem;
   font-family: 'Black Ops One', cursive;
   width: 30rem; }
+  input::placeholder,
+  textarea::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #0a5521;
+    opacity: 1;
+    /* Firefox */ }
+
+.color-bordo {
+  color: #800000 !important;
+  text-shadow: 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow !important;
+  border: 2px solid wheat !important; }
+
+.color-turquoise {
+  color: #00ced1 !important;
+  text-shadow: 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow !important;
+  border: 2px solid #778899 !important; }
 
 @keyframes moveUpDown {
   0% {
@@ -496,20 +514,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
   -moz-background-size: cover;
   -o-background-size: cover; }
 
-.container-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%; }
-
 .containter-content-header {
   z-index: 2;
   align-self: center;
   margin: auto;
   justify-self: center;
-  width: 82%;
-  margin-top: 4%; }
+  width: 82%; }
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.39);
@@ -563,15 +573,15 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .aboutme {
   display: flex;
-  width: 100%;
-  height: 100%;
+  min-height: 630px;
+  width: 100vw;
+  height: 100vh;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 5rem 5rem;
   background-color: #f7f7f7;
-  flex-wrap: wrap;
-  background-image: url("./img/lukas-blazek-261681-unsplash.jpg");
+  flex-wrap: nowrap;
+  background-image: url("./img/art-artistic-background-1831234.jpg");
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -592,22 +602,26 @@ ORDER: Base + typography > general layout + grid > page layout > components
     animation-timing-function: ease-out; } }
 
 .content-frame-aboutme {
-  min-height: 50vh;
   width: 80%;
-  margin-top: 3%;
+  margin-top: 5%;
+  border: 1px solid green;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   position: relative; }
 
 .frame-text {
-  margin-bottom: 9%;
+  margin-top: 3%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 70%;
-  width: 100%; }
+  width: 82%; }
+  @media only screen and (max-width: 56.25em) {
+    .frame-text {
+      margin-top: 0; } }
 
 .powergraph-aboutme {
   position: relative;
@@ -644,36 +658,38 @@ ORDER: Base + typography > general layout + grid > page layout > components
   justify-content: space-between; }
 
 .contactme {
+  min-width: 320px;
+  min-height: 500px;
   display: flex;
-  width: 100%;
-  height: 100%;
-  padding: 5rem 5rem;
+  width: 100vw;
+  height: 100vh;
   background-color: #f7f7f7;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  background-image: url("./img/aleksandra-wantuch-1138330-unsplash.jpg");
+  background-image: url("./img/art-background-blank-1020317.jpg");
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; }
   .contactme__container {
     margin-top: 3%;
+    margin-left: 1.5%;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     justify-content: space-between;
     align-content: space-between; }
 
 .btn-container {
+  padding-top: 5%;
   display: flex;
   margin: auto;
-  padding: 2rem; }
+  width: 50%; }
 
 .giladimg {
-  width: 20rem;
-  height: 20rem;
+  width: 17rem;
+  height: 17rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   transition: all 0.2s;
@@ -836,6 +852,37 @@ ORDER: Base + typography > general layout + grid > page layout > components
       .card__price-value {
         font-size: 4rem; } }
 
+.position-protfolio-btn {
+  position: fixed;
+  top: 92%;
+  left: 46.3%; }
+  @media only screen and (max-width: 37.5em) {
+    .position-protfolio-btn {
+      position: fixed;
+      top: 1%;
+      left: 38.5% !important; } }
+  @media only screen and (max-width: 75em) {
+    .position-protfolio-btn {
+      left: 44%; } }
+
+.position-contact-btn {
+  position: absolute;
+  top: 49%;
+  left: 2%; }
+  @media only screen and (max-width: 37.5em) {
+    .position-contact-btn {
+      position: fixed;
+      top: 1%; } }
+
+.position-about-btn {
+  position: absolute;
+  top: 49%;
+  right: 2%; }
+  @media only screen and (max-width: 37.5em) {
+    .position-about-btn {
+      position: fixed;
+      top: 1%; } }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -843,7 +890,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: inline-block;
   border-radius: 10rem;
   transition: all 0.2s;
-  position: relative;
   font-size: 1.6rem;
   border: none;
   cursor: pointer; }
@@ -864,6 +910,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
   background-color: #fffff0;
   color: #777; }
   .btn--white::after {
+    background-color: #fffff0; }
+
+.btn--black {
+  background-color: #000000;
+  color: #fffff0; }
+  .btn--black::after {
     background-color: #fffff0; }
 
 .btn--green {
@@ -914,3 +966,28 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.button, .button:link, .button:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 2rem;
+  display: inline-block;
+  transition: all 0.2s;
+  font-size: 1.6rem;
+  color: #ffa400;
+  text-shadow: -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 1px 1px 0 white;
+  border: 1px solid #1b2d3d;
+  cursor: pointer;
+  font-weight: 900;
+  border-radius: 11px; }
+  @media only screen and (max-width: 37.5em) {
+    .button, .button:link, .button:visited {
+      padding: 0.7rem 0.7rem; } }
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  background: linear-gradient(white, transparent); }
+  .button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }

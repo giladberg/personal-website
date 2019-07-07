@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Spring } from 'react-spring/renderprops';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Contactme = () => {
   const [formData, setFormData] = useState({
@@ -37,49 +39,75 @@ const Contactme = () => {
   }
 
   return (
-    <section className='contactme'>
-      <h2 className='aboutme-title'>Contact me</h2>
+    <Spring
+      config={{ duration: 3000 }}
+      from={{ opacity: 0, marginLeft: 500 }}
+      to={{ opacity: 1, marginLeft: 0 }}
+    >
+      {props => (
+        <section className='contactme' style={props}>
+          <h2 className='aboutme-title'>Contact me</h2>
 
-      <form className='contactme__container' onSubmit={e => onSubmit(e)}>
-        <input
-          type='text'
-          placeholder='Enter your name'
-          value={name}
-          name='name'
-          required
-          onChange={e => onChange(e)}
-        />
-        <input
-          type='email'
-          placeholder='Enter your email'
-          value={email}
-          name='email'
-          required
-          onChange={e => onChange(e)}
-        />
-        <input
-          type='text'
-          placeholder='Enter your phone'
-          value={phone}
-          name='phone'
-          required
-          onChange={e => onChange(e)}
-        />
+          <form className='contactme__container' onSubmit={e => onSubmit(e)}>
+            <input
+              type='text'
+              placeholder='Enter your name'
+              value={name}
+              name='name'
+              required
+              onChange={e => onChange(e)}
+            />
+            <input
+              type='email'
+              placeholder='Enter your email'
+              value={email}
+              name='email'
+              required
+              onChange={e => onChange(e)}
+            />
+            <input
+              type='text'
+              placeholder='Enter your phone'
+              value={phone}
+              name='phone'
+              required
+              onChange={e => onChange(e)}
+            />
 
-        <textarea
-          placeholder='Enter your message'
-          value={message}
-          name='message'
-          rows='4'
-          cols='50'
-          required
-          onChange={e => onChange(e)}
-        />
-        <div className='btn-container'>
-          <input type='submit' className='btn btn--green' value='Send' />
-        </div>
-      </form>
-    </section>
+            <textarea
+              placeholder='Enter your message'
+              value={message}
+              name='message'
+              rows='4'
+              cols='50'
+              required
+              onChange={e => onChange(e)}
+            />
+            <div className='btn-container'>
+              <input type='submit' className='btn btn--black' value='Send' />
+            </div>
+          </form>
+          <Link
+            className='button position-contact-btn color-bordo '
+            to='/contact-me'
+          >
+            Contact Me
+          </Link>
+          <Link
+            className='button position-protfolio-btn color-bordo'
+            to='/protfolio'
+          >
+            Protfolio
+          </Link>
+          <Link
+            className='button position-about-btn color-bordo'
+            to='/about-me'
+          >
+            About Me
+          </Link>
+        </section>
+      )}
+    </Spring>
   );
 };
 

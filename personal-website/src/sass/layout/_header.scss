@@ -7,22 +7,11 @@
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  // background-image: url('./img/sean-lim-1225106-unsplash.jpg');
   background-image: url('./img/luca-bravo-xnqVGsbXgV4-unsplash.jpg');
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-}
-
-.container-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  // width:100vw;
-  // height:100%;
-  z-index: -1;
-  width: 100%;
 }
 
 .containter-content-header {
@@ -31,5 +20,6 @@
   margin: auto;
   justify-self: center;
   width: 82%;
-  margin-top: 4%;
+  // margin-top: 4%;
+  // border: 1px solid red;
 }

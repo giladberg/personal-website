@@ -1,16 +1,9 @@
-import React, { Fragment, useEffect, useRef } from 'react';
-import starShower from './starShower';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-  // const canvasRef = useRef(null);
-  // useEffect(() => {
-  //   const canvas = canvasRef.current;
-  //   starShower.starsShower(canvas);
-  // }, []);
-
   return (
-    <Fragment>
-      <div className='container-canvas'>{/* <canvas ref={canvasRef} /> */}</div>
+    <header className='header'>
       <div className='containter-content-header'>
         <h1 className='header-main-title'>
           Hello, I'm{' '}
@@ -18,7 +11,16 @@ const Header = () => {
           <br /> I'm a full-stack web developer.
         </h1>
       </div>
-    </Fragment>
+      <Link className='button position-contact-btn  ' to='/contact-me'>
+        Contact Me
+      </Link>
+      <Link className='button position-protfolio-btn ' to='/protfolio'>
+        Protfolio
+      </Link>
+      <Link className='button position-about-btn ' to='/about-me'>
+        About Me
+      </Link>
+    </header>
   );
 };
 

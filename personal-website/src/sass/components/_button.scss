@@ -1,3 +1,36 @@
+.position-protfolio-btn {
+  position: fixed;
+  // bottom: 2%;
+  top: 92%;
+  left: 46.3%;
+  @include respond(phone) {
+    position: fixed;
+    top: 1%;
+    left: 38.5% !important;
+  }
+  @include respond(tab-land) {
+    left: 44%;
+  }
+}
+.position-contact-btn {
+  position: absolute;
+  top: 49%;
+  left: 2%;
+  @include respond(phone) {
+    position: fixed;
+    top: 1%;
+  }
+}
+.position-about-btn {
+  position: absolute;
+  top: 49%;
+  right: 2%;
+  @include respond(phone) {
+    position: fixed;
+    top: 1%;
+  }
+}
+
 .btn {
   &,
   &:link,
@@ -8,7 +41,7 @@
     display: inline-block;
     border-radius: 10rem;
     transition: all 0.2s;
-    position: relative;
+    // position: relative;
     font-size: $default-font-size;
 
     //Change for the <button> element
@@ -36,6 +69,14 @@
   &--white {
     background-color: $color-primary-white;
     color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-primary-white;
+    }
+  }
+  &--black {
+    background-color: $color-primary-black;
+    color: $color-primary-white;
 
     &::after {
       background-color: $color-primary-white;
@@ -102,5 +143,43 @@
   &:active {
     box-shadow: 0 0.5rem 1rem rgba($color-primary-black, 0.15);
     transform: translateY(0);
+  }
+}
+
+.button {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 2rem;
+    display: inline-block;
+    //border-radius: 10rem;
+    transition: all 0.2s;
+    // position: relative;
+    font-size: $default-font-size;
+    color: #ffa400;
+    text-shadow: -0.5px -0.5px 0 white, 0.5px -0.5px 0 white,
+      -0.5px 0.5px 0 white, 1px 1px 0 white;
+    //Change for the <button> element
+    border: 1px solid $color-primary-text;
+    cursor: pointer;
+    font-weight: 900;
+    border-radius: 11px;
+    @include respond(phone) {
+      //padding: 1.2rem 1.2rem;
+      padding: 0.7rem 0.7rem;
+    }
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.2);
+    //background-color: mediumaquamarine;
+    background: linear-gradient(white, transparent);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
   }
 }
