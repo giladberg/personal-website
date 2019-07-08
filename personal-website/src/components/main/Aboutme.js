@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import $ from 'jquery';
+//import $ from 'jquery';
 import { Spring } from 'react-spring/renderprops';
 
 const Aboutme = () => {

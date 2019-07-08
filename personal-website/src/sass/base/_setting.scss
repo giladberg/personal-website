@@ -34,7 +34,7 @@ body {
   // padding: 3rem;
   overflow-x: hidden;
   @include respond(phone) {
-    overflow-x: auto !important;
+    // overflow-x: auto !important;
   }
 
   @include respond(tab-port) {

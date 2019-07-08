@@ -1,6 +1,6 @@
 .giladimg {
-  width: 17rem;
-  height: 17rem;
+  width: 15rem;
+  height: 15rem;
   box-shadow: 0 1.5rem 4rem rgba($color-primary-black, 0.4);
   border-radius: 6px;
   transition: all 0.2s;
@@ -12,6 +12,9 @@
     transform: scale(1.07) translateY(-0.5rem);
     box-shadow: 0 2.5rem 4rem rgba($color-primary-black, 0.5);
     z-index: 20;
+  }
+  @include respond(phone) {
+    display: none;
   }
 }
 
@@ -35,5 +38,19 @@
   width: 23px;
   @include respond(phone) {
     width: 13px;
+  }
+}
+
+.protfolio-img {
+  width: 25rem;
+  height: 31rem;
+  border-radius: 13px;
+  opacity: 0.8;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    opacity: 9;
+    transform: scale(1.07) translateY(-0.5rem);
+    box-shadow: 0 2.5rem 4rem rgba($color-primary-black, 0.5);
   }
 }

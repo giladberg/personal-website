@@ -1,26 +1,34 @@
 .protfolio {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 5rem 5rem;
-  background-color: $color-grey-light-1;
-  // border: 3px solid purple;
+  //border: 3px solid purple;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  //justify-content: center;
   align-items: center;
-  background-image: url('./img/aleksandra-wantuch-1138330-unsplash.jpg');
+  background-image: url('./img/backdrop-background-orange-132197.jpg');
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  flex-wrap: nowrap;
 }
 .card-container {
   margin-top: 5%;
-  width: 50%;
-  height: 100%;
+  width: 70%;
+  //height: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  //border: 1px solid black;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+
+  // border: 1px solid gold;
 }

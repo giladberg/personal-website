@@ -42,6 +42,8 @@
   border-bottom-width: 0.3rem;
   border-bottom-style: solid;
   position: relative;
+  // margin-bottom: -3%;
+  margin-top: -3%;
 }
 
 .second-title-aboutme {
@@ -61,6 +63,9 @@
   line-height: 1.6;
   text-align: left;
   //margin-left: 3%;
+  @include respond(tab-land) {
+    font-size: 1.8rem;
+  }
 }
 
 .logo-text {
@@ -73,21 +78,23 @@
 }
 
 .mytechnology-aboutme {
-  margin-top: 5%;
+  margin-top: 7%;
   text-align: right;
   position: relative;
   font-size: 3.5rem;
   font-family: 'Black Ops One', cursive;
   color: $color-primary-title;
-
+  //border: 1px solid green;
   @include respond(phone) {
+    width: 300px;
   }
 }
 
 .tech-text {
-  color: $color-primary-blue;
+  color: $color-primary-black;
   font-weight: 900;
-  font-family: 'Black Ops One', cursive;
+  // font-family: 'Black Ops One', cursive;
+  font-family: 'Oxygen', sans-serif;
   font-size: 1.2rem;
   line-height: 2.3;
 }
@@ -129,4 +136,17 @@ textarea {
   color: #00ced1 !important;
   text-shadow: 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow !important;
   border: 2px solid #778899 !important;
+}
+
+.color-white {
+  color: white !important;
+  text-shadow: 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow !important;
+  border: 2px solid black !important;
+}
+
+.title-protfolio {
+  color: #fff8dc;
+  font-size: 2.9rem;
+  text-align: center;
+  margin-bottom: 3%;
 }

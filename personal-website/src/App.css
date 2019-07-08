@@ -39,9 +39,6 @@ body {
   height: 100vh;
   box-sizing: border-box;
   overflow-x: hidden; }
-  @media only screen and (max-width: 37.5em) {
-    body {
-      overflow-x: auto !important; } }
   @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
@@ -387,7 +384,8 @@ template {
   color: #000000;
   border-bottom-width: 0.3rem;
   border-bottom-style: solid;
-  position: relative; }
+  position: relative;
+  margin-top: -3%; }
 
 .second-title-aboutme {
   font-size: 3.5rem;
@@ -404,6 +402,9 @@ template {
   font-weight: 900;
   line-height: 1.6;
   text-align: left; }
+  @media only screen and (max-width: 75em) {
+    .powergraph-aboutme {
+      font-size: 1.8rem; } }
 
 .logo-text {
   color: #e31b6d;
@@ -414,17 +415,20 @@ template {
       display: none; } }
 
 .mytechnology-aboutme {
-  margin-top: 5%;
+  margin-top: 7%;
   text-align: right;
   position: relative;
   font-size: 3.5rem;
   font-family: 'Black Ops One', cursive;
   color: #bc8f8f; }
+  @media only screen and (max-width: 37.5em) {
+    .mytechnology-aboutme {
+      width: 300px; } }
 
 .tech-text {
-  color: #0000cd;
+  color: #000000;
   font-weight: 900;
-  font-family: 'Black Ops One', cursive;
+  font-family: 'Oxygen', sans-serif;
   font-size: 1.2rem;
   line-height: 2.3; }
 
@@ -462,6 +466,17 @@ textarea {
   color: #00ced1 !important;
   text-shadow: 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow !important;
   border: 2px solid #778899 !important; }
+
+.color-white {
+  color: white !important;
+  text-shadow: 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow, 0 0 0 yellow !important;
+  border: 2px solid black !important; }
+
+.title-protfolio {
+  color: #fff8dc;
+  font-size: 2.9rem;
+  text-align: center;
+  margin-bottom: 3%; }
 
 @keyframes moveUpDown {
   0% {
@@ -586,13 +601,29 @@ ORDER: Base + typography > general layout + grid > page layout > components
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; }
+  @media only screen and (min-width: 56.25em) {
+    .aboutme {
+      height: 100vh !important; } }
 
 .tech-list {
   display: flex;
   backface-visibility: visible;
   justify-content: space-around;
-  width: 70%;
-  padding: 4rem; }
+  width: 70%; }
+  @media only screen and (max-width: 56.25em) {
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 3%;
+      width: 100%; } }
+  @media only screen and (min-width: 37.5em) {
+    .tech-list {
+      margin-left: 7%;
+      width: 110%; } }
+  @media only screen and (min-width: 56.25em) {
+    .tech-list {
+      margin-left: -3%;
+      margin-top: 3%; } }
 
 @media only screen and (min-width: 75em) {
   .tech-frame {
@@ -604,12 +635,20 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .content-frame-aboutme {
   width: 80%;
   margin-top: 5%;
-  border: 1px solid green;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
   position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .content-frame-aboutme {
+      margin-left: 11%;
+      flex-wrap: wrap; } }
+  @media only screen and (max-width: 37.5em) {
+    .content-frame-aboutme {
+      width: 100%;
+      margin-top: 27%;
+      min-height: 400px;
+      margin-left: 0; } }
 
 .frame-text {
   margin-top: 3%;
@@ -622,6 +661,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
   @media only screen and (max-width: 56.25em) {
     .frame-text {
       margin-top: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .frame-text {
+      margin-top: 3%;
+      width: 100%; } }
 
 .powergraph-aboutme {
   position: relative;
@@ -634,28 +677,30 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .protfolio {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 5rem 5rem;
-  background-color: #f7f7f7;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  background-image: url("./img/aleksandra-wantuch-1138330-unsplash.jpg");
+  background-image: url("./img/backdrop-background-orange-132197.jpg");
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover; }
+  -o-background-size: cover;
+  flex-wrap: nowrap; }
 
 .card-container {
   margin-top: 5%;
-  width: 50%;
-  height: 100%;
+  width: 70%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: flex-start; }
+
+.card-item {
+  display: flex;
+  flex-direction: column; }
 
 .contactme {
   min-width: 320px;
@@ -688,8 +733,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   width: 50%; }
 
 .giladimg {
-  width: 17rem;
-  height: 17rem;
+  width: 15rem;
+  height: 15rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   transition: all 0.2s;
@@ -698,6 +743,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
     transform: scale(1.07) translateY(-0.5rem);
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
     z-index: 20; }
+  @media only screen and (max-width: 37.5em) {
+    .giladimg {
+      display: none; } }
 
 .logo-pic {
   fill: #ffff00;
@@ -716,6 +764,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
   @media only screen and (max-width: 37.5em) {
     .icon-nav-bar {
       width: 13px; } }
+
+.protfolio-img {
+  width: 25rem;
+  height: 31rem;
+  border-radius: 13px;
+  opacity: 0.8;
+  transition: 0.25s ease-in-out;
+  cursor: pointer; }
+  .protfolio-img:hover {
+    opacity: 9;
+    transform: scale(1.07) translateY(-0.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5); }
 
 .card {
   perspective: 100rem;
