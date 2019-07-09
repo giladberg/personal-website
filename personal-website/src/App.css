@@ -691,6 +691,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   flex-wrap: nowrap; }
 
 .card-container {
+  position: relative;
   margin-top: 5%;
   width: 70%;
   display: flex;
@@ -731,6 +732,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: flex;
   margin: auto;
   width: 50%; }
+
+.container-detail {
+  position: absolute;
+  top: 0;
+  width: 50rem;
+  height: 50rem;
+  background-color: rgba(0, 0, 0, 0.79); }
 
 .giladimg {
   width: 15rem;

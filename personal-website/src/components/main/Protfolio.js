@@ -1,11 +1,17 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import projectList from './project';
 import { Link } from 'react-router-dom';
 import { Spring } from 'react-spring/renderprops';
+import PrpjectDetail from './ProjectDetail';
 
 const Protfolio = () => {
+   const [openDetail, setOpenDetail] = useState(false);
   console.log(projectList);
-
+   
+  const closePopup=(e)=>{
+    setOpenDetail(false)
+  }
+ 
   return (
     <Spring
       config={{ duration: 3000 }}
@@ -16,13 +22,20 @@ const Protfolio = () => {
         <section className='protfolio' style={props}>
           <h2 className='aboutme-title'>Protfolio</h2>
           <div className='card-container'>
-            <div className='card-item'>
+            <div className='card-item' onBlur={($event)=>{closePopup($event)}}  tabIndex={30}>
               <h3 className='title-protfolio'>family-box</h3>
               <img
                 className='protfolio-img'
                 src='./img/familybox.jpg'
                 alt='gilad'
+                onClick={() => setOpenDetail(true)}
               />
+              {openDetail ? (
+                     <PrpjectDetail />
+                   ) : (
+                     ''
+                   )}
+              
             </div>
           </div>
           <Link
