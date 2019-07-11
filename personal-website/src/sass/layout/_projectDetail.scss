@@ -1,7 +1,13 @@
-.container-detail{
-    position:absolute;
-    top:0;
-    width:50rem;
-    height:50rem;
-    background-color: rgba(0, 0, 0, 0.79);
+.container-detail {
+  position: absolute;
+  top: auto;
+  width: 40rem;
+  height: 40rem;
+  background-color: rgba(0, 0, 0, 0.96);
+  border: 50px solid rgba(0, 0, 0, 0.39);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  //justify-content: center;
 }

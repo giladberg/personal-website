@@ -5,13 +5,15 @@ import { Spring } from 'react-spring/renderprops';
 import PrpjectDetail from './ProjectDetail';
 
 const Protfolio = () => {
-   const [openDetail, setOpenDetail] = useState(false);
+  const [openDetail, setOpenDetail] = useState(-1);
   console.log(projectList);
-   
-  const closePopup=(e)=>{
-    setOpenDetail(false)
+
+  const closePopup = e => {
+    setOpenDetail(-1);
+  };
+  {
+    console.log(openDetail);
   }
- 
   return (
     <Spring
       config={{ duration: 3000 }}
@@ -22,21 +24,25 @@ const Protfolio = () => {
         <section className='protfolio' style={props}>
           <h2 className='aboutme-title'>Protfolio</h2>
           <div className='card-container'>
-            <div className='card-item' onBlur={($event)=>{closePopup($event)}}  tabIndex={30}>
-              <h3 className='title-protfolio'>family-box</h3>
-              <img
-                className='protfolio-img'
-                src='./img/familybox.jpg'
-                alt='gilad'
-                onClick={() => setOpenDetail(true)}
-              />
-              {openDetail ? (
-                     <PrpjectDetail />
-                   ) : (
-                     ''
-                   )}
-              
-            </div>
+            {projectList.map((project, index) => (
+              <div
+                key={index}
+                className='card-item'
+                onBlur={$event => {
+                  closePopup($event);
+                }}
+                tabIndex={30}
+              >
+                <h3 className='title-protfolio'>{project.title}</h3>
+                <img
+                  className='protfolio-img'
+                  src={`./img/${project.photo}`}
+                  alt='gilad'
+                  onClick={() => setOpenDetail(index)}
+                />
+                {openDetail == index ? <PrpjectDetail current={project} /> : ''}
+              </div>
+            ))}
           </div>
           <Link
             className='button position-contact-btn color-white '

@@ -478,6 +478,10 @@ textarea {
   text-align: center;
   margin-bottom: 3%; }
 
+.movieName {
+  color: #fff8dc;
+  text-align: center; }
+
 @keyframes moveUpDown {
   0% {
     opacity: 0;
@@ -697,11 +701,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start; }
+  justify-content: space-around;
+  border: 1px solid black; }
 
 .card-item {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  outline: none !important; }
 
 .contactme {
   min-width: 320px;
@@ -735,10 +741,15 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .container-detail {
   position: absolute;
-  top: 0;
-  width: 50rem;
-  height: 50rem;
-  background-color: rgba(0, 0, 0, 0.79); }
+  top: auto;
+  width: 40rem;
+  height: 40rem;
+  background-color: rgba(0, 0, 0, 0.96);
+  border: 50px solid rgba(0, 0, 0, 0.39);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  z-index: 999; }
 
 .giladimg {
   width: 15rem;
