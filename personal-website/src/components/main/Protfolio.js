@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import projectList from './project';
 import { Link } from 'react-router-dom';
 import { Spring } from 'react-spring/renderprops';
@@ -6,14 +6,13 @@ import PrpjectDetail from './ProjectDetail';
 
 const Protfolio = () => {
   const [openDetail, setOpenDetail] = useState(-1);
-  console.log(projectList);
 
   const closePopup = e => {
-    setOpenDetail(-1);
+    if (e.relatedTarget === null) {
+      setOpenDetail(-1);
+    }
   };
-  {
-    console.log(openDetail);
-  }
+
   return (
     <Spring
       config={{ duration: 3000 }}
@@ -40,7 +39,11 @@ const Protfolio = () => {
                   alt='gilad'
                   onClick={() => setOpenDetail(index)}
                 />
-                {openDetail == index ? <PrpjectDetail current={project} /> : ''}
+                {openDetail == index ? (
+                  <PrpjectDetail style={props} current={project} />
+                ) : (
+                  ''
+                )}
               </div>
             ))}
           </div>

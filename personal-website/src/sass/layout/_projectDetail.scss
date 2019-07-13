@@ -4,10 +4,23 @@
   width: 40rem;
   height: 40rem;
   background-color: rgba(0, 0, 0, 0.96);
-  border: 50px solid rgba(0, 0, 0, 0.39);
+  border: 50px solid rgba(0, 0, 0, 0.29);
   border-radius: 40px;
   display: flex;
   flex-direction: column;
   z-index: 999;
   //justify-content: center;
+  margin-left: -5%;
+  @include respond(phone) {
+    margin-left: -33%;
+  }
+  @include respond(tab-port) {
+    margin-left: -10%;
+  }
+}
+.buttons-container {
+  display: flex;
+  margin-top: auto;
+  justify-content: space-evenly;
+  // border: 1px solid white;
 }

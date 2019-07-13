@@ -183,3 +183,13 @@
     }
   }
 }
+
+.tech-button {
+  color: $color-primary-bordo;
+  border: 1px solid $color-tech !important;
+  padding: 1.5rem !important;
+  &:hover {
+    color: $color-tech;
+    border: 1px solid $color-primary-bordo !important;
+  }
+}
