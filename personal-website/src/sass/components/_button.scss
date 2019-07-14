@@ -1,5 +1,6 @@
 .position-protfolio-btn {
   position: fixed;
+  z-index: 99999;
   // bottom: 2%;
   top: 92%;
   left: 46.3%;
@@ -14,6 +15,7 @@
 }
 .position-contact-btn {
   position: absolute;
+  z-index: 99999;
   top: 49%;
   left: 2%;
   @include respond(phone) {
@@ -23,6 +25,7 @@
 }
 .position-about-btn {
   position: absolute;
+  z-index: 99999;
   top: 49%;
   right: 2%;
   @include respond(phone) {

@@ -482,7 +482,7 @@ textarea {
 
 .title-protfolio {
   color: #fff8dc;
-  font-size: 2.9rem;
+  font-size: 2.3rem;
   text-align: center;
   margin-bottom: 3%; }
 
@@ -872,6 +872,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   width: 100vw;
   height: 100vh;
   padding: 5rem 5rem;
+  min-height: 830px;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
@@ -884,7 +885,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   z-index: -100; }
   @media only screen and (max-width: 37.5em) {
     .protfolio {
-      height: 225vh; } }
+      height: 225vh;
+      min-height: 1230px; } }
 
 .card-container {
   position: relative;
@@ -897,8 +899,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .card-item {
   position: relative;
-  top: auto;
-  z-index: 1 !important;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   outline: none !important;
@@ -949,8 +950,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   border: 50px solid rgba(0, 0, 0, 0.29);
   border-radius: 40px;
   display: flex;
-  flex-direction: column;
-  margin-left: -5%; }
+  flex-direction: column; }
   @media only screen and (max-width: 37.5em) {
     .container-detail {
       margin-left: -33%; } }
@@ -1015,14 +1015,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
       width: 13px; } }
 
 .protfolio-img {
-  position: 'absolute';
+  position: relative;
   left: 0;
-  width: 25rem;
-  height: 31rem;
+  width: 22rem;
+  height: 28rem;
   border-radius: 13px;
   opacity: 0.8;
   transition: 0.25s ease-in-out;
-  z-index: -10;
+  z-index: -1000;
   cursor: pointer; }
   .protfolio-img:hover {
     opacity: 9;
@@ -1166,6 +1166,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .position-protfolio-btn {
   position: fixed;
+  z-index: 99999;
   top: 92%;
   left: 46.3%; }
   @media only screen and (max-width: 37.5em) {
@@ -1179,6 +1180,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .position-contact-btn {
   position: absolute;
+  z-index: 99999;
   top: 49%;
   left: 2%; }
   @media only screen and (max-width: 37.5em) {
@@ -1188,6 +1190,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .position-about-btn {
   position: absolute;
+  z-index: 99999;
   top: 49%;
   right: 2%; }
   @media only screen and (max-width: 37.5em) {
