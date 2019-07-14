@@ -39,11 +39,7 @@ const Protfolio = () => {
                   alt='gilad'
                   onClick={() => setOpenDetail(index)}
                 />
-                {openDetail == index ? (
-                  <PrpjectDetail style={props} current={project} />
-                ) : (
-                  ''
-                )}
+                {openDetail == index ? <PrpjectDetail current={project} /> : ''}
               </div>
             ))}
           </div>

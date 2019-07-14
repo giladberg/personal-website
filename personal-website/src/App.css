@@ -880,7 +880,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  z-index: -100; }
   @media only screen and (max-width: 37.5em) {
     .protfolio {
       height: 225vh; } }
@@ -895,6 +896,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   justify-content: space-around; }
 
 .card-item {
+  position: relative;
+  top: auto;
+  z-index: 1 !important;
   display: flex;
   flex-direction: column;
   outline: none !important;
@@ -946,7 +950,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
   border-radius: 40px;
   display: flex;
   flex-direction: column;
-  z-index: 999;
   margin-left: -5%; }
   @media only screen and (max-width: 37.5em) {
     .container-detail {
@@ -959,6 +962,24 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: flex;
   margin-top: auto;
   justify-content: space-evenly; }
+
+.alert {
+  display: flex;
+  margin-top: 3%;
+  border-radius: 10px;
+  width: 35rem;
+  height: 6rem;
+  z-index: 9999; }
+  .alert__text {
+    margin: auto;
+    color: white;
+    font-family: 'Oswald', sans-serif; }
+
+.danger {
+  background-color: #800000; }
+
+.success {
+  background-color: #0a5521; }
 
 .giladimg {
   width: 15rem;
@@ -994,11 +1015,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
       width: 13px; } }
 
 .protfolio-img {
+  position: 'absolute';
+  left: 0;
   width: 25rem;
   height: 31rem;
   border-radius: 13px;
   opacity: 0.8;
   transition: 0.25s ease-in-out;
+  z-index: -10;
   cursor: pointer; }
   .protfolio-img:hover {
     opacity: 9;

@@ -42,11 +42,14 @@
 }
 
 .protfolio-img {
+  position: 'absolute';
+  left: 0;
   width: 25rem;
   height: 31rem;
   border-radius: 13px;
   opacity: 0.8;
   transition: 0.25s ease-in-out;
+  z-index: -10;
   cursor: pointer;
   &:hover {
     opacity: 9;

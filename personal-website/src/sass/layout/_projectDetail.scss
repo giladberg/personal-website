@@ -1,6 +1,8 @@
 .container-detail {
   position: absolute;
   top: auto;
+
+  // right: -15px;
   width: 40rem;
   height: 40rem;
   background-color: rgba(0, 0, 0, 0.96);
@@ -8,7 +10,7 @@
   border-radius: 40px;
   display: flex;
   flex-direction: column;
-  z-index: 999;
+  // z-index: 133;
   //justify-content: center;
   margin-left: -5%;
   @include respond(phone) {
