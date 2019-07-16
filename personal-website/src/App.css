@@ -852,7 +852,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   width: 82%; }
   @media only screen and (max-width: 56.25em) {
     .frame-text {
-      margin-top: 0; } }
+      margin-top: 5%; } }
   @media only screen and (max-width: 37.5em) {
     .frame-text {
       margin-top: 3%;
@@ -872,7 +872,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   width: 100vw;
   height: 100vh;
   padding: 5rem 5rem;
-  min-height: 830px;
+  min-height: 870px;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
@@ -896,9 +896,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around; }
+  @media only screen and (max-width: 75em) {
+    .card-container {
+      width: 63%; } }
 
 .card-item {
   position: relative;
+  margin-top: 2%;
   z-index: 0;
   display: flex;
   flex-direction: column;
@@ -943,20 +947,25 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .container-detail {
   position: absolute;
-  top: auto;
-  width: 40rem;
-  height: 40rem;
+  top: -28px;
+  right: -53px;
+  width: 33rem;
+  height: 35rem;
   background-color: rgba(0, 0, 0, 0.96);
-  border: 50px solid rgba(0, 0, 0, 0.29);
-  border-radius: 40px;
+  border: 15px solid rgba(0, 0, 0, 0.29);
+  border-radius: 15px;
   display: flex;
   flex-direction: column; }
   @media only screen and (max-width: 37.5em) {
     .container-detail {
-      margin-left: -33%; } }
-  @media only screen and (max-width: 56.25em) {
+      margin-left: 33%;
+      right: -93px; } }
+  @media only screen and (max-width: 75em) {
     .container-detail {
-      margin-left: -10%; } }
+      width: 31rem;
+      height: 35rem;
+      right: -38px;
+      margin-top: 3%; } }
 
 .buttons-container {
   display: flex;

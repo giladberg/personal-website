@@ -13,13 +13,6 @@ const Protfolio = () => {
     }
   };
 
-  const styleIndex = index => {
-    console.log(index);
-    return {
-      backGroundColor: 'blue !important'
-    };
-  };
-
   return (
     <Spring
       config={{ duration: 3000 }}
@@ -38,7 +31,6 @@ const Protfolio = () => {
                   closePopup($event);
                 }}
                 tabIndex={30}
-                style={styleIndex(index)}
               >
                 <h3 className='title-protfolio'>{project.title}</h3>
                 <img
@@ -47,7 +39,11 @@ const Protfolio = () => {
                   alt='gilad'
                   onClick={() => setOpenDetail(index)}
                 />
-                {openDetail == index ? <PrpjectDetail current={project} /> : ''}
+                {openDetail === index ? (
+                  <PrpjectDetail current={project} />
+                ) : (
+                  ''
+                )}
               </div>
             ))}
           </div>

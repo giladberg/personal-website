@@ -25,13 +25,19 @@ const ProjectDetail = ({ current }) => {
             </span>
           </p>
           <div className='buttons-container'>
-            <a href={current.url} className='btn tech-button' target='_blank'>
+            <a
+              href={current.url}
+              className='btn tech-button'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               Check It Out
             </a>
             <a
               href={current.gitHub}
               className='btn tech-button'
               target='_blank'
+              rel='noopener noreferrer'
             >
               GitHub
             </a>

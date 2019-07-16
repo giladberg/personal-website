@@ -5,8 +5,8 @@ import Alert from '../Alert';
 import { Link } from 'react-router-dom';
 
 const Contactme = () => {
-  const [alert, setAlert] = useState({flag:false,msg:'',classType:''});
-  const { flag, msg, classType } = alert;
+  const [alert, setAlert] = useState({ flag: false, msg: '', classType: '' });
+  const { flag } = alert;
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,40 +21,41 @@ const Contactme = () => {
   const onSubmit = async e => {
     e.preventDefault();
     if (!is_valid_phone_number(phone)) {
-      await setTimeout(
-        () => {
-         setAlert({...alert,'flag': false,'msg': '','classType': ''})
-        },
-        5000
-      );
-      setAlert({...alert,'flag': true,'msg': 'Please enter Israeli phone number','classType': 'danger'})
-    }
-    else{
-       const response = await axios.post('http://localhost:5000/api/email', {
-      name: name,
-      email: email,
-      phone: phone,
-      message: message
-    });
-    console.log(response);
-    if (response.data === 'ok') {
-       await setTimeout(
-        () => {
-         setAlert({...alert,'flag': false,'msg': '','classType': ''})
-        },
-        5000
-      );
-       setAlert({...alert,'flag': true,'msg': 'Sent successfuly','classType': 'success'})
-      setFormData({
-        ...formData,
-        'name': '',
-        'email': '',
-        'phone': '',
-        'message': ''
+      await setTimeout(() => {
+        setAlert({ ...alert, flag: false, msg: '', classType: '' });
+      }, 5000);
+      setAlert({
+        ...alert,
+        flag: true,
+        msg: 'Please enter Israeli phone number',
+        classType: 'danger'
       });
+    } else {
+      const response = await axios.post('http://localhost:5000/api/email', {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message
+      });
+      if (response.data === 'ok') {
+        await setTimeout(() => {
+          setAlert({ ...alert, flag: false, msg: '', classType: '' });
+        }, 5000);
+        setAlert({
+          ...alert,
+          flag: true,
+          msg: 'Sent successfuly',
+          classType: 'success'
+        });
+        setFormData({
+          ...formData,
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+      }
     }
-    }
-   
   };
 
   function is_valid_phone_number(number) {
@@ -73,12 +74,8 @@ const Contactme = () => {
         <section className='contactme' style={props}>
           <h2 className='aboutme-title'>Contact me</h2>
 
-          {flag == true ? (
-                  <Alert data={alert} />
-                ) : (
-                  ''
-                )}
-         
+          {flag === true ? <Alert data={alert} /> : ''}
+
           <form className='contactme__container' onSubmit={e => onSubmit(e)}>
             <input
               type='text'

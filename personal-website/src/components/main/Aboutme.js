@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Spring } from 'react-spring/renderprops';
 
 const Aboutme = () => {
-  const [img, setImg] = useState([
+  const [img] = useState([
     { name: 'react', url: '/SVG/react.svg' },
     { name: 'angular', url: '/SVG/angular.svg' },
     { name: 'nodejs', url: '/SVG/node-dot-js.svg' },
@@ -40,7 +40,11 @@ const Aboutme = () => {
           <h2 className='aboutme-title'>About me</h2>
           <div className='content-frame-aboutme'>
             <div className='composition'>
-              <img className='giladimg' src='./img/gilad.jpeg' alt='gilad' />
+              <img
+                className='giladimg'
+                src='./img/10371505_431093553765254_5901443619298204528_n.jpg'
+                alt='gilad'
+              />
             </div>
             <div className='frame-text'>
               <h2 className='second-title-aboutme'> Who I Am?</h2>
@@ -69,39 +73,6 @@ const Aboutme = () => {
                 ))}
               </div>
             </div>
-
-            {/* <div className='content-frame-aboutme'>
-            <div className='composition'>
-              <img className='giladimg' src='./img/gilad.jpeg' alt='gilad' />
-            </div>
-            <div className='frame-text'>
-              <h2 className='second-title-aboutme'> Who I Am?</h2>
-              <div className='text-container'>
-                <p className='powergraph-aboutme'>
-                  I'm Full-Stack Developer, specializing in React and Node.JS.
-                  <br />
-                  I have serious passion for Front-End & Back-End.
-                  <br />
-                  I Believe in elegant solutions for complex problems.
-                  <br /> If you are seeking for a developer, you can get in touch
-                  with me here.
-                </p>
-              </div>
-            </div>
-          </div>
-          <h2 className='mytechnology-aboutme'> Using Technology:</h2>
-          <div className='tech-list'>
-            {img.map((photo, index) => (
-              <div
-                className='tech-frame'
-                key={photo.name}
-                style={{ animationDelay: `0s` }}
-              >
-                <img src={photo.url} alt={photo.name} />
-                <p className='tech-text'>{photo.name}</p>
-              </div>
-            ))}
-          </div> */}
           </div>
           <Link
             className='button position-contact-btn color-turquoise '
