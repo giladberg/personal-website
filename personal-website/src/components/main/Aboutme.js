@@ -37,7 +37,7 @@ const Aboutme = () => {
     >
       {props => (
         <section className='aboutme' style={props}>
-          <h2 className='aboutme-title'>About me</h2>
+          <h2 className='aboutme-title title-effect-aboutme'>ABOUT ME</h2>
           <div className='content-frame-aboutme'>
             <div className='composition'>
               <img

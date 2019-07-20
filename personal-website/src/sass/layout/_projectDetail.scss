@@ -1,13 +1,17 @@
 .container-detail {
   position: absolute;
-  top: -28px;
-
+  top: 3px;
+  opacity: 0.1;
   right: -53px;
   width: 33rem;
   height: 35rem;
-  background-color: rgba(0, 0, 0, 0.96);
-  border: 15px solid rgba(0, 0, 0, 0.29);
-  border-radius: 15px;
+  padding: 10px 30px;
+  padding-bottom: 35px !important;
+  // background-color: #c5c7c6;
+  background-color: rgba(0, 0, 0, 0.56);
+  //border: 15px solid #c5c7c6;
+  //border: 15px solid rgba(0, 0, 0, 0.56);
+  border-radius: 2px;
   display: flex;
   flex-direction: column;
   //z-index: 1;

@@ -5,6 +5,9 @@
   border-radius: 6px;
   transition: all 0.2s;
   outline-offset: 2rem;
+  -webkit-animation: fade-in-left 1.2s cubic-bezier(0.47, 0, 0.745, 0.715) 3s
+    both;
+  animation: fade-in-left 1.2s cubic-bezier(0.47, 0, 0.745, 0.715) 3s both;
   //position: relative;
 
   &:hover {
@@ -46,10 +49,11 @@
   left: 0;
   width: 22rem;
   height: 28rem;
-  border-radius: 13px;
+  border-radius: 2px;
   opacity: 0.8;
   transition: 0.25s ease-in-out;
   z-index: -1000;
+  margin-top: 15%;
   cursor: pointer;
   &:hover {
     opacity: 9;

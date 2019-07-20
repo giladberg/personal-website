@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 99999;
   // bottom: 2%;
-  top: 92%;
+  top: 89%;
   left: 46.3%;
   @include respond(phone) {
     position: fixed;
@@ -14,7 +14,7 @@
   }
 }
 .position-contact-btn {
-  position: absolute;
+  position: fixed;
   z-index: 99999;
   top: 49%;
   left: 2%;
@@ -24,7 +24,7 @@
   }
 }
 .position-about-btn {
-  position: absolute;
+  position: fixed;
   z-index: 99999;
   top: 49%;
   right: 2%;
@@ -83,6 +83,10 @@
 
     &::after {
       background-color: $color-primary-white;
+    }
+    &:hover {
+      background-color: $color-primary-white;
+      color: $color-primary-black;
     }
   }
 
@@ -188,11 +192,11 @@
 }
 
 .tech-button {
-  color: $color-primary-bordo;
-  border: 1px solid $color-tech !important;
+  color: #ffa400;
+  border: 1px solid white !important;
   padding: 1.5rem !important;
   &:hover {
-    color: $color-tech;
-    border: 1px solid $color-primary-bordo !important;
+    color: white;
+    border: 1px solid #ffa400 !important;
   }
 }

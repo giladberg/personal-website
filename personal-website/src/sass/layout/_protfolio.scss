@@ -3,22 +3,23 @@
   width: 100vw;
   height: 100vh;
   padding: 5rem 5rem;
-  min-height: 870px;
+  min-height: 1000px;
   //border: 3px solid purple;
   flex-direction: column;
   flex-wrap: wrap;
   //justify-content: center;
   align-items: center;
-  background-image: url('./img/backdrop-background-orange-132197.jpg');
+  background-image: url('./img/WhatsApp Image 2019-07-20 at 15.35.27.jpeg');
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  // background-position: center;
   flex-wrap: nowrap;
   z-index: -100;
   @include respond(phone) {
     height: 225vh;
-    min-height: 1230px;
+    min-height: 1752px;
   }
 }
 .card-container {
@@ -50,6 +51,15 @@
     both;
   animation: bounce-top 1.9s cubic-bezier(0.895, 0.03, 0.685, 0.22) 2.5s both;
   @include respond(phone) {
-    margin-top: 7%;
+    margin-top: 51%;
+  }
+}
+
+.margin-top-title {
+  -webkit-animation: bounce-top 1.9s cubic-bezier(0.895, 0.03, 0.685, 0.22) 2.5s
+    both;
+  animation: bounce-top 1.9s cubic-bezier(0.895, 0.03, 0.685, 0.22) 2.5s both;
+  @include respond(phone) {
+    margin-top: 26%;
   }
 }

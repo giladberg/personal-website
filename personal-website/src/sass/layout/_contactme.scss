@@ -1,6 +1,6 @@
 .contactme {
   min-width: 320px;
-  min-height: 500px;
+  min-height: 700px;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -12,11 +12,12 @@
   justify-content: center;
   align-items: center;
   //background-image: url('./img/aleksandra-wantuch-1138330-unsplash.jpg');
-  background-image: url('./img/art-background-blank-1020317.jpg');
+  background-image: url('./img/WhatsApp Image 2019-07-20 at 19.13.58 (1).jpeg');
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-position: center;
 
   &__container {
     margin-top: 3%;
@@ -43,4 +44,12 @@
   //padding: 2rem;
   // align-self: flex-end;
   width: 50%;
+}
+
+.margin-top-contact {
+  margin-top: -1%;
+}
+.contactme-effect {
+  -webkit-animation: text-focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }

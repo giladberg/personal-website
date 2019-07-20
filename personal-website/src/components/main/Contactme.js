@@ -72,7 +72,9 @@ const Contactme = () => {
     >
       {props => (
         <section className='contactme' style={props}>
-          <h2 className='aboutme-title'>Contact me</h2>
+          <h2 className='aboutme-title margin-top-contact contactme-effect'>
+            CONTACT ME
+          </h2>
 
           {flag === true ? <Alert data={alert} /> : ''}
 
@@ -106,7 +108,7 @@ const Contactme = () => {
               placeholder='Enter your message'
               value={message}
               name='message'
-              rows='4'
+              rows='3'
               cols='50'
               required
               onChange={e => onChange(e)}

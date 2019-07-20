@@ -21,7 +21,7 @@ const Protfolio = () => {
     >
       {props => (
         <section className='protfolio' style={props}>
-          <h2 className='aboutme-title'>Protfolio</h2>
+          <h2 className='aboutme-title margin-top-title'>PROTFOLIO</h2>
           <div className='card-container'>
             {projectList.map((project, index) => (
               <div
@@ -31,13 +31,16 @@ const Protfolio = () => {
                   closePopup($event);
                 }}
                 tabIndex={30}
+                onMouseLeave={() => setTimeout(() => setOpenDetail(-1), 300)}
               >
                 <h3 className='title-protfolio'>{project.title}</h3>
                 <img
                   className='protfolio-img'
                   src={`./img/${project.photo}`}
                   alt='gilad'
-                  onClick={() => setOpenDetail(index)}
+                  onMouseEnter={() =>
+                    setTimeout(() => setOpenDetail(index), 500)
+                  }
                 />
                 {openDetail === index ? (
                   <PrpjectDetail current={project} />

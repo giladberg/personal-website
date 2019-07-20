@@ -8,11 +8,12 @@
   padding: 5rem 5rem;
   background-color: $color-grey-light-1;
   flex-wrap: nowrap;
-  background-image: url('./img/art-artistic-background-1831234.jpg');
+  background-image: url('./img/WhatsApp Image 2019-07-20 at 19.13.58.jpeg');
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-position: center;
 
   @include respondMin(tab-port) {
     height: 100vh !important;
@@ -56,6 +57,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border: 1px solid red;
 
   position: relative;
   @include respond(tab-port) {
@@ -71,6 +73,7 @@
 }
 
 .frame-text {
+  border: 1px solid green;
   margin-top: 3%;
   display: flex;
   flex-direction: column;
@@ -95,4 +98,9 @@
 }
 .composition {
   position: relative;
+}
+
+.title-effect-aboutme {
+  -webkit-animation: text-focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }

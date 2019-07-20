@@ -12,7 +12,7 @@ const ProjectDetail = ({ current }) => {
         <div className='container-detail' style={props}>
           <h1 className='movieName'>{current.title}</h1>
           <p className='tech-project'>
-            Client: <span className='color-tech'>{current.clientSide}</span>
+            Client: <span className='color-tech'> {current.clientSide}</span>
           </p>
           <p className='tech-project'>
             Server:{' '}
