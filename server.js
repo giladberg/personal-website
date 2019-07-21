@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === 'production') {
 
   app.get('#', (req, res) => {
     res.sendFile(
-      path.resolve(__dirname, 'pesonal-website', 'build', 'index.html')
+      path.resolve(__dirname, 'personal-website', 'build', 'index.html')
     );
   });
 }
