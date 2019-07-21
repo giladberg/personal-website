@@ -965,13 +965,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
   z-index: -100; }
   @media only screen and (max-width: 37.5em) {
     .protfolio {
-      height: 225vh;
+      height: 255vh;
       min-height: 1752px; } }
 
 .card-container {
   position: relative;
   margin-top: 5%;
-  width: 70%;
+  width: 43%;
+  max-width: 700px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

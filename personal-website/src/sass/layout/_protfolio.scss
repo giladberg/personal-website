@@ -18,14 +18,16 @@
   flex-wrap: nowrap;
   z-index: -100;
   @include respond(phone) {
-    height: 225vh;
+    height: 255vh;
     min-height: 1752px;
   }
 }
 .card-container {
   position: relative;
   margin-top: 5%;
-  width: 70%;
+  //width: 70%;
+  width: 43%;
+  max-width: 700px;
   //height: 80%;
   display: flex;
   flex-direction: row;
