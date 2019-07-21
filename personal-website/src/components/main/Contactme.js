@@ -31,12 +31,15 @@ const Contactme = () => {
         classType: 'danger'
       });
     } else {
-      const response = await axios.post('http://localhost:5000/api/email', {
-        name: name,
-        email: email,
-        phone: phone,
-        message: message
-      });
+      const response = await axios.post(
+        'https://gilad-bergmann.herokuapp.com/api/email',
+        {
+          name: name,
+          email: email,
+          phone: phone,
+          message: message
+        }
+      );
       if (response.data === 'ok') {
         await setTimeout(() => {
           setAlert({ ...alert, flag: false, msg: '', classType: '' });
