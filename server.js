@@ -16,7 +16,7 @@ app.use(express.json({ extended: false }));
 // Define Routes
 
 app.use('/api/email', require('./routes/mail'));
-app.get('#', function(req, res) {
+app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'personal-website', 'build', 'index.html'));
 });
 
