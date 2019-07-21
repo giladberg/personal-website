@@ -40,6 +40,9 @@
     margin-left: -3%;
     margin-top: 3%;
   }
+  @include respond(phone) {
+    margin-top: 3%;
+  }
 }
 
 .tech-frame {
@@ -57,7 +60,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid red;
 
   position: relative;
   @include respond(tab-port) {
@@ -73,7 +75,6 @@
 }
 
 .frame-text {
-  border: 1px solid green;
   margin-top: 3%;
   display: flex;
   flex-direction: column;

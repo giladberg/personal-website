@@ -399,6 +399,12 @@ template {
   text-align: center;
   -webkit-animation: fade-in-left 1.2s cubic-bezier(0.47, 0, 0.745, 0.715) 3s both;
   animation: fade-in-left 1.2s cubic-bezier(0.47, 0, 0.745, 0.715) 3s both; }
+  @media only screen and (max-width: 56.25em) {
+    .second-title-aboutme {
+      margin-left: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .second-title-aboutme {
+      margin-top: 14%; } }
 
 .powergraph-aboutme {
   margin-top: 1%;
@@ -424,6 +430,7 @@ template {
       display: none; } }
 
 .mytechnology-aboutme {
+  margin-left: -18%;
   margin-top: 7%;
   text-align: right;
   position: relative;
@@ -435,6 +442,9 @@ template {
   @media only screen and (max-width: 37.5em) {
     .mytechnology-aboutme {
       width: 300px; } }
+  @media only screen and (max-width: 56.25em) {
+    .mytechnology-aboutme {
+      margin-left: 0; } }
 
 .tech-text {
   color: #000000;
@@ -463,7 +473,6 @@ textarea {
   width: 30rem; }
   input::placeholder,
   textarea::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
     opacity: 1;
     /* Firefox */
@@ -880,6 +889,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
     .tech-list {
       margin-left: -3%;
       margin-top: 3%; } }
+  @media only screen and (max-width: 37.5em) {
+    .tech-list {
+      margin-top: 3%; } }
 
 @media only screen and (min-width: 75em) {
   .tech-frame {
@@ -894,7 +906,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid red;
   position: relative; }
   @media only screen and (max-width: 56.25em) {
     .content-frame-aboutme {
@@ -908,7 +919,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
       margin-left: 0; } }
 
 .frame-text {
-  border: 1px solid green;
   margin-top: 3%;
   display: flex;
   flex-direction: column;

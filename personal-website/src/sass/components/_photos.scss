@@ -8,10 +8,8 @@
   -webkit-animation: fade-in-left 1.2s cubic-bezier(0.47, 0, 0.745, 0.715) 3s
     both;
   animation: fade-in-left 1.2s cubic-bezier(0.47, 0, 0.745, 0.715) 3s both;
-  //position: relative;
 
   &:hover {
-    //outline: 0.5rem solid black;
     transform: scale(1.07) translateY(-0.5rem);
     box-shadow: 0 2.5rem 4rem rgba($color-primary-black, 0.5);
     z-index: 20;
