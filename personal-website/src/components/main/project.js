@@ -1,5 +1,30 @@
 const project = [
   {
+    id: 467,
+    title: 'Taskit',
+    clientSide: 'Html, Java Script (es5), Sass, React',
+    serverSide: ' NodeJS, MongoDB, Express, Cloudinary.',
+    gitHub: 'https://github.com/shmuel7e/TaskIt',
+    url: 'https://app-taskit.herokuapp.com/',
+    photo: 'task-it.jpg'
+  },
+  {
+    id: 467,
+    title: 'Appsus',
+    clientSide: 'Html, Java Script (es5), Css, React',
+    gitHub: 'https://github.com/giladberg/appSus',
+    url: 'https://giladberg.github.io/appSus/#/',
+    photo: 'appp-sus.jpg'
+  },
+  {
+    id: 555,
+    title: 'Meme-Generator',
+    clientSide: 'Html, Java Script (es5), Css, Canvas',
+    gitHub: 'https://github.com/giladberg/meme-generator',
+    url: 'https://giladberg.github.io/meme-generator/',
+    photo: '‏‏meme-generetor.jpg'
+  },
+  {
     id: 1,
     title: 'Social-Network',
     clientSide: 'Html, Java Script (es6), Css (sass), React, Redux',
@@ -10,12 +35,11 @@ const project = [
   },
   {
     id: 2,
-    title: 'Family-Box',
-    clientSide: 'Html, Java Script (es5), Css, Bootstrap',
-    serverSide: 'PHP, My SQL, Google Api, File Api',
-    gitHub: 'https://github.com/meiranga/FamilyBox',
-    url: 'http://meiranga.mtacloud.co.il/',
-    photo: 'familybox.jpg'
+    title: 'Mine-Sweeper',
+    clientSide: 'Html, Java Script (es5), Css',
+    gitHub: 'https://github.com/giladberg/mine-sweeper',
+    url: 'https://giladberg.github.io/mine-sweeper/',
+    photo: 'mine-sweeper.jpg'
   },
   {
     id: 3,

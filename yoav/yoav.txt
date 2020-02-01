@@ -1,9 +1,0 @@
-font-family: 'Comfortaa', cursive;
-font-family: 'Exo', sans-serif;
-
-hello: צבע פונט: 
-#1b2d3d
-
-כתב: 
-font-family: 'Exo', sans-serif;
-
